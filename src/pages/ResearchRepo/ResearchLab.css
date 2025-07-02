@@ -1,0 +1,37 @@
+.research-hero {
+    position: relative;
+    background: url('../../images/research-labs.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.hero-footer {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+
+.hero-footer h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero-footer p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}

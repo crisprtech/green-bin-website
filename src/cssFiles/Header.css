@@ -1,0 +1,61 @@
+
+/* Navbar styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown styles */
+.dropdown-hover .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-10px); /* Start slightly above */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and position */
+}
+
+.dropdown-hover:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+    transition: background-color 0.3s, padding 0.3s; /* Transition for background and padding */
+    padding: 10px 15px; /* Add some padding for better touch targets */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light grey on hover */
+    padding-left: 20px; /* Slightly shift item on hover */
+}
+
+/* Right-side options styles */
+.nav-link {
+    margin-left: 20px;
+    color: #333; /* Darker text color */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        margin-left: 10px;
+    }
+}

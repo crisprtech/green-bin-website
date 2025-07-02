@@ -1,0 +1,71 @@
+.hero {
+    position: relative;
+    background: url('../../images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    margin: 10px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+}
+
+/* Hero Footer with Quick Stats */
+.hero-footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.stat-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-box p {
+    font-size: 1rem;
+}
