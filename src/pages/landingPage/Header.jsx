@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Leaf,
@@ -15,9 +16,11 @@ import {
 import logo from "../../assets/logo.png";
 
 const Header = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 w-full bg-white shadow-xs z-[50] font-sans">
-      <div className="container  flex justify-between items-baseline py-3 px-25">
+      <div className="container flex justify-between items-baseline py-3 px-4 md:px-25">
         {/* Logo and Brand */}
         <Link to="/" className="items-center space-x-1">
           <span className="text-2xl font-extrabold text-green-600 tracking-tight whitespace-nowrap">
@@ -25,8 +28,29 @@ const Header = () => {
           </span>
         </Link>
 
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {/* Icon for mobile menu */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
         {/* Navigation */}
-        <div className="hidden md:flex items-center ">
+        <div className={`md:flex items-center ${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
           <Dropdown title="Carbon Registry">
             <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
               Register
@@ -133,3 +157,4 @@ const DropdownItem = ({ to, children, icon: Icon }) => {
 };
 
 export default Header;
+

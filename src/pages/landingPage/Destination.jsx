@@ -1,5 +1,8 @@
 import React from "react";
-import backgroundImage from "../../assets/landing.jpg";
+import backgroundImage from "../../assets/about.jpg";
+import students from "../../assets/offsetters.jpg";
+import business from "../../assets/business.jpg";
+import office from "../../assets/startups.jpg";
 const DifferentDestinations = () => {
   return (
     <div className="my-12 max-w-6xl mx-auto px-4">
@@ -17,7 +20,7 @@ const DifferentDestinations = () => {
           transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+rgba(255, 255, 255, 0.4)), url(${students})`,
           }}
         >
           <div className="p-6">
@@ -40,7 +43,7 @@ rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
           transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+rgba(255, 255, 255, 0.4)), url(${business})`,
           }}
         >
           <div className="p-6">
@@ -63,7 +66,7 @@ rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
           transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
             backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+rgba(255, 255, 255, 0.4)), url(${office})`,
           }}
         >
           <div className="p-6">
