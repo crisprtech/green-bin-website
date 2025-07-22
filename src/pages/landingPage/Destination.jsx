@@ -1,5 +1,5 @@
 import React from "react";
-
+import backgroundImage from "../../assets/landing.jpg";
 const DifferentDestinations = () => {
   return (
     <div className="my-12 max-w-6xl mx-auto px-4">
@@ -11,12 +11,15 @@ const DifferentDestinations = () => {
         across different sectors to create a greener future.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105">
-          <img
-            src="students.jpg"
-            className="w-full h-48 object-cover"
-            alt="Students"
-          />
+        <div
+          className="relative bg-cover bg-center bg-no-repeat 
+          shadow-sm rounded-2xl overflow-hidden transition-transform 
+          transform hover:scale-105 min-h-[40vh] flex items-end"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
+rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+          }}
+        >
           <div className="p-6">
             <h5 className="text-xl font-semibold mb-2">Eco Scholars</h5>
             <p className="text-gray-600 mb-4">
@@ -31,12 +34,15 @@ const DifferentDestinations = () => {
             </a>
           </div>
         </div>
-        <div className="bg-white shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105">
-          <img
-            src="entrepreneurs.jpg"
-            className="w-full h-48 object-cover"
-            alt="Entrepreneurs"
-          />
+        <div
+          className="relative bg-cover bg-center bg-no-repeat 
+          shadow-sm rounded-2xl overflow-hidden transition-transform 
+          transform hover:scale-105 min-h-[40vh] flex items-end"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
+rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+          }}
+        >
           <div className="p-6">
             <h5 className="text-xl font-semibold mb-2">Eco Entrepreneurs</h5>
             <p className="text-gray-600 mb-4">
@@ -51,12 +57,15 @@ const DifferentDestinations = () => {
             </a>
           </div>
         </div>
-        <div className="bg-white shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105">
-          <img
-            src="innovators.jpg"
-            className="w-full h-48 object-cover"
-            alt="Innovators"
-          />
+        <div
+          className="relative bg-cover bg-center bg-no-repeat 
+          shadow-sm rounded-2xl overflow-hidden transition-transform 
+          transform hover:scale-105 min-h-[40vh] flex items-end"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
+rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+          }}
+        >
           <div className="p-6">
             <h5 className="text-xl font-semibold mb-2">
               Sustainable Innovators
@@ -77,7 +86,7 @@ const DifferentDestinations = () => {
       <div className="text-center mt-8">
         <a
           href="#"
-          className="inline-block bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-500 transition"
+          className="inline-block bg-blue-600 text-white py-3 px-6 rounded-2xl hover:bg-blue-500 transition"
         >
           Explore More Green Initiatives
         </a>
