@@ -14,7 +14,7 @@ const Introduction = () => {
     <div
       className="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-end justify-center"
       style={{
-        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url(${backgroundImage})`,
       }}
     >
       {/* Overlay content */}

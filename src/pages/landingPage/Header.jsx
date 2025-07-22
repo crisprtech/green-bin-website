@@ -1,5 +1,6 @@
 
-import React from "react";
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Leaf,
@@ -18,7 +19,7 @@ import logo from "../../assets/logo.png";
 const Header = () => {
   return (
     <nav className="fixed top-0 w-full bg-white shadow-xs z-[50] font-sans">
-      <div className="container  flex justify-between items-baseline py-3 px-25">
+      <div className="container flex justify-between items-baseline py-3 px-25">
         {/* Logo and Brand */}
         <Link to="/" className="items-center space-x-1">
           <span className="text-2xl font-extrabold text-green-600 tracking-tight whitespace-nowrap">
@@ -27,7 +28,8 @@ const Header = () => {
         </Link>
 
         {/* Navigation */}
-        <div className="hidden md:flex items-center ">
+        <div className="hidden md:flex items-center">
+          {/* Dropdowns */}
           <Dropdown title="Carbon Registry">
             <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
               Register
@@ -95,12 +97,23 @@ const Header = () => {
 
 // Dropdown Wrapper
 const Dropdown = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="relative group">
-      <button className="inline-flex items-center px-4 py-2 font-bold text-gray-800 hover:bg-green-100 rounded transition duration-200 whitespace-nowrap">
+      <button
+        onClick={handleToggle}
+        onMouseEnter={() => window.innerWidth >= 768 && setIsOpen(true)}
+        onMouseLeave={() => window.innerWidth >= 768 && setIsOpen(false)}
+        className="inline-flex items-center px-4 py-2 font-bold text-gray-800 hover:bg-green-100 rounded transition duration-200 whitespace-nowrap"
+      >
         {title}
         <svg
-          className="ml-1 w-4 h-4 transition-transform transform group-hover:rotate-180"
+          className={`ml-1 w-4 h-4 transition-transform transform ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -113,9 +126,12 @@ const Dropdown = ({ title, children }) => {
           />
         </svg>
       </button>
-      <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xs hidden group-hover:block z-20">
-        {children}
-      </div>
+      {/* Show dropdown items based on state */}
+      {(isOpen || window.innerWidth < 768) && (
+        <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xs z-20">
+          {children}
+        </div>
+      )}
     </div>
   );
 };

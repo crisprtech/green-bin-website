@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About GreenBin */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex items-center">
+            <h5 className="font-bold text-xl mb-4 ml-18 flex items-center">
               <FaInfoCircle className="mr-2" /> GreenBin
             </h5>
             <ul className="space-y-2">
@@ -48,7 +48,7 @@ const Footer = () => {
 
           {/* Sustainability & Impact */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex items-center">
+            <h5 className="font-bold text-xl mb-4 ml-8 flex items-center">
               <FaLeaf className="mr-2" /> Sustainability
             </h5>
             <ul className="space-y-2">
@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Community & Engagement */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex items-center">
+            <h5 className="font-bold text-xl mb-4 flex ml-16 items-center">
               <FaUsers className="mr-2" /> Community
             </h5>
             <ul className="space-y-2">
@@ -106,7 +106,7 @@ const Footer = () => {
 
           {/* Support & Help */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex items-center">
+            <h5 className="font-bold text-xl mb-4 flex ml-15 items-center">
               <FaQuestionCircle className="mr-2" /> Support
             </h5>
             <ul className="space-y-2">
