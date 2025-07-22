@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -12,80 +10,130 @@ import {
   BadgeCheck,
   FileText,
   Lightbulb,
+  Menu,
 } from "lucide-react";
 
 import logo from "../../assets/logo.png";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleDropdownToggle = (title) => {
+    setActiveDropdown((prev) => (prev === title ? null : title));
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white shadow-xs z-[50] font-sans">
-      <div className="container flex justify-between items-baseline py-3 px-25">
+      <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-10">
         {/* Logo and Brand */}
-        <Link to="/" className="items-center space-x-1">
+        <Link to="/" className="flex items-center space-x-2">
+          <img src={logo} alt="GreenBin Logo" className="w-8 h-8" />
           <span className="text-2xl font-extrabold text-green-600 tracking-tight whitespace-nowrap">
             GreenBin
           </span>
         </Link>
 
+        {/* Mobile menu toggle */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <Menu className="w-6 h-6 text-gray-800" />
+        </button>
+
         {/* Navigation */}
-        <div className="hidden md:flex items-center">
-          {/* Dropdowns */}
-          <Dropdown title="Carbon Registry">
-            <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-              Register
-            </DropdownItem>
-            <DropdownItem
-              to="/GreenCarbonPoints/OtherServices/DashBoard"
-              icon={Globe}
+        <div
+          className={`${
+            isMobileMenuOpen ? "block" : "hidden"
+          } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:flex md:items-center shadow md:shadow-none z-40`}
+        >
+          <div className="flex flex-col md:flex-row md:items-center w-full md:space-x-4">
+            <Dropdown
+              title="Carbon Registry"
+              isOpen={activeDropdown === "Carbon Registry"}
+              onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
-              Trade
-            </DropdownItem>
-          </Dropdown>
+              <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
+                Register
+              </DropdownItem>
+              <DropdownItem
+                to="/GreenCarbonPoints/OtherServices/DashBoard"
+                icon={Globe}
+              >
+                Trade
+              </DropdownItem>
+            </Dropdown>
 
-          <Dropdown title="Idea Safari">
-            <DropdownItem to="/ideaSafari/ApplyNow" icon={Lightbulb}>
-              Apply Now
-            </DropdownItem>
-            <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
-              Discover More
-            </DropdownItem>
-          </Dropdown>
+            <Dropdown
+              title="Idea Safari"
+              isOpen={activeDropdown === "Idea Safari"}
+              onToggle={() => handleDropdownToggle("Idea Safari")}
+            >
+              <DropdownItem to="/ideaSafari/ApplyNow" icon={Lightbulb}>
+                Apply Now
+              </DropdownItem>
+              <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
+                Discover More
+              </DropdownItem>
+            </Dropdown>
 
-          <Dropdown title="Climate Intelligence">
-            <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
-              Discover GreenBins
-            </DropdownItem>
-            <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
-              Waste Fellowship
-            </DropdownItem>
-          </Dropdown>
+            <Dropdown
+              title="Climate Intelligence"
+              isOpen={activeDropdown === "Climate Intelligence"}
+              onToggle={() => handleDropdownToggle("Climate Intelligence")}
+            >
+              <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
+                Discover GreenBins
+              </DropdownItem>
+              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+                Waste Fellowship
+              </DropdownItem>
+            </Dropdown>
 
-          <Dropdown title="Research">
-            <DropdownItem to="/ResearchRepo/ResearchRepo" icon={BookOpen}>
-              Green Education
-            </DropdownItem>
-            <DropdownItem to="/ResearchRepo/Blogs" icon={Brain}>
-              Green Blogs
-            </DropdownItem>
-            <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
-              Research Labs
-            </DropdownItem>
-          </Dropdown>
+            <Dropdown
+              title="Research"
+              isOpen={activeDropdown === "Research"}
+              onToggle={() => handleDropdownToggle("Research")}
+            >
+              <DropdownItem to="/ResearchRepo/ResearchRepo" icon={BookOpen}>
+                Green Education
+              </DropdownItem>
+              <DropdownItem to="/ResearchRepo/Blogs" icon={Brain}>
+                Green Blogs
+              </DropdownItem>
+              <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
+                Research Labs
+              </DropdownItem>
+            </Dropdown>
 
-          <Dropdown title="Support">
-            <DropdownItem to="/ResearchRepo/HelpCenter" icon={HelpCircle}>
-              Help Center
-            </DropdownItem>
-            <DropdownItem to="/OurTeam" icon={BadgeCheck}>
-              Our Team
-            </DropdownItem>
-          </Dropdown>
+            <Dropdown
+              title="Support"
+              isOpen={activeDropdown === "Support"}
+              onToggle={() => handleDropdownToggle("Support")}
+            >
+              <DropdownItem to="/ResearchRepo/HelpCenter" icon={HelpCircle}>
+                Help Center
+              </DropdownItem>
+              <DropdownItem to="/OurTeam" icon={BadgeCheck}>
+                Our Team
+              </DropdownItem>
+            </Dropdown>
+
+            <div className="md:hidden w-full px-4 py-2">
+              <Link to="/authentication/LoginPage">
+                <button className="w-full border-2 border-green-500 rounded-2xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
+                  Get Started
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Auth Buttons */}
-        <div className="hidden md:flex space-x-1">
+        {/* Desktop Auth Button */}
+        <div className="hidden md:flex mr-60">
           <Link to="/authentication/LoginPage">
-            <button className="border-2 border-green-500 rounded-2xl text-green-600 font-semibold rounded px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
+            <button className="border-2 border-green-500 rounded-2xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
               Get Started
             </button>
           </Link>
@@ -95,25 +143,18 @@ const Header = () => {
   );
 };
 
-// Dropdown Wrapper
-const Dropdown = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
+const Dropdown = ({ title, children, isOpen, onToggle }) => {
   return (
-    <div className="relative group">
+    <div className="relative w-full md:w-auto group">
       <button
-        onClick={handleToggle}
-        onMouseEnter={() => window.innerWidth >= 768 && setIsOpen(true)}
-        onMouseLeave={() => window.innerWidth >= 768 && setIsOpen(false)}
-        className="inline-flex items-center px-4 py-2 font-bold text-gray-800 hover:bg-green-100 rounded transition duration-200 whitespace-nowrap"
+        onClick={onToggle}
+        className="flex justify-between md:inline-flex items-center w-full px-4 py-2 font-bold text-gray-800 hover:bg-gray-100 rounded-2xl transition duration-200"
       >
         {title}
         <svg
-          className={`ml-1 w-4 h-4 transition-transform transform ${isOpen ? "rotate-180" : ""}`}
+          className={`ml-1 w-4 h-4 transition-transform transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -126,9 +167,8 @@ const Dropdown = ({ title, children }) => {
           />
         </svg>
       </button>
-      {/* Show dropdown items based on state */}
-      {(isOpen || window.innerWidth < 768) && (
-        <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xs z-20">
+      {isOpen && (
+        <div className="absolute md:absolute left-0 mt-2 md:mt-2 w-56 bg-white rounded-xl shadow-xs z-50">
           {children}
         </div>
       )}
@@ -136,12 +176,11 @@ const Dropdown = ({ title, children }) => {
   );
 };
 
-// Dropdown Item with Icon
 const DropdownItem = ({ to, children, icon: Icon }) => {
   return (
     <Link
       to={to}
-      className="flex items-center px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150 space-x-2"
+      className="flex items-center px-4 py-2 text-gray-700 hover:bg-white-50 hover:text-green-700 transition-colors duration-150 space-x-2"
     >
       {Icon && <Icon className="w-4 h-4 text-green-500" />}
       <span>{children}</span>
@@ -150,4 +189,3 @@ const DropdownItem = ({ to, children, icon: Icon }) => {
 };
 
 export default Header;
-
