@@ -1,8 +1,8 @@
 import React from "react";
-import backgroundImage from "../../assets/about.jpg";
 import students from "../../assets/offsetters.jpg";
 import business from "../../assets/business.jpg";
 import office from "../../assets/startups.jpg";
+
 const DifferentDestinations = () => {
   return (
     <div className="my-12 max-w-6xl mx-auto px-4">
@@ -14,18 +14,19 @@ const DifferentDestinations = () => {
         across different sectors to create a greener future.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Eco Scholars */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat 
-          shadow-sm rounded-2xl overflow-hidden transition-transform 
-          transform hover:scale-105 min-h-[40vh] flex items-end"
+          className="relative bg-cover bg-center bg-no-repeat shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${students})`,
+            backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(${students})`,
           }}
         >
+          <button className="absolute top-2 left-2 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded">
+            200 Joined
+          </button>
           <div className="p-6">
-            <h5 className="text-xl font-semibold mb-2">Eco Scholars</h5>
-            <p className="text-gray-600 mb-4">
+            <h5 className="text-lg font-semibold mb-2">Eco Scholars</h5>
+            <p className="text-gray-600 mb-4 text-sm">
               Empowering students with research resources and
               sustainability-focused learning materials.
             </p>
@@ -37,18 +38,20 @@ rgba(255, 255, 255, 0.4)), url(${students})`,
             </a>
           </div>
         </div>
+
+        {/* Eco Entrepreneurs */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat 
-          shadow-sm rounded-2xl overflow-hidden transition-transform 
-          transform hover:scale-105 min-h-[40vh] flex items-end"
+          className="relative bg-cover bg-center bg-no-repeat shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${business})`,
+            backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(${business})`,
           }}
         >
+          <button className="absolute top-2 left-2 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded">
+            500 Joined
+          </button>
           <div className="p-6">
-            <h5 className="text-xl font-semibold mb-2">Eco Entrepreneurs</h5>
-            <p className="text-gray-600 mb-4">
+            <h5 className="text-lg font-semibold mb-2">Eco Entrepreneurs</h5>
+            <p className="text-gray-600 mb-4 text-sm">
               Supporting green startups with insights, funding opportunities,
               and networking.
             </p>
@@ -60,20 +63,22 @@ rgba(255, 255, 255, 0.4)), url(${business})`,
             </a>
           </div>
         </div>
+
+        {/* Sustainable Innovators */}
         <div
-          className="relative bg-cover bg-center bg-no-repeat 
-          shadow-sm rounded-2xl overflow-hidden transition-transform 
-          transform hover:scale-105 min-h-[40vh] flex items-end"
+          className="relative bg-cover bg-center bg-no-repeat shadow-sm rounded-2xl overflow-hidden transition-transform transform hover:scale-105 min-h-[40vh] flex items-end"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${office})`,
+            backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(${office})`,
           }}
         >
+          <button className="absolute top-2 left-2 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded">
+            250 Joined
+          </button>
           <div className="p-6">
-            <h5 className="text-xl font-semibold mb-2">
+            <h5 className="text-lg font-semibold mb-2">
               Sustainable Innovators
             </h5>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-sm">
               Encouraging groundbreaking ideas that contribute to environmental
               conservation and eco-tech advancements.
             </p>
@@ -85,14 +90,6 @@ rgba(255, 255, 255, 0.4)), url(${office})`,
             </a>
           </div>
         </div>
-      </div>
-      <div className="text-center mt-8">
-        <a
-          href="#"
-          className="inline-block bg-blue-600 text-white py-3 px-6 rounded-2xl hover:bg-blue-500 transition"
-        >
-          Explore More Green Initiatives
-        </a>
       </div>
     </div>
   );

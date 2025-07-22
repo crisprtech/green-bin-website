@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLeaf, FaUsers, FaLightbulb } from "react-icons/fa";
-import backgroundImage from "../../assets/landing.jpg"; // Adjust path as needed
+import backgroundImage from "../../assets/lan-d.jpg"; // Adjust path as needed
 
 const Introduction = () => {
   const [email, setEmail] = useState("");
@@ -12,11 +12,9 @@ const Introduction = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-end 
-      justify-center"
+      className="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-end justify-center"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(34, 197, 94, 0.2), 
-rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url(${backgroundImage})`,
       }}
     >
       {/* Overlay content */}
@@ -25,7 +23,7 @@ rgba(255, 255, 255, 0.4)), url(${backgroundImage})`,
           {/* Left Text Section */}
           <div>
             <motion.h1
-              className="mb-4 text-4xl font-extrabold text-white"
+              className="mb-4 text-4xl font-extrabold text-gray-800"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
