@@ -1,6 +1,6 @@
+
 import React from "react";
 import { motion } from "framer-motion";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 // Research Labs Data
 const researchLabs = [
@@ -52,10 +52,10 @@ const testimonials = [
 // Screen Component
 const Screen = ({ title, content }) => (
   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-    <Container className="py-5">
-      <h2 className="text-center mb-4">{title}</h2>
-      {content}
-    </Container>
+    <div className="py-10 bg-gray-50">
+      <h2 className="text-center text-3xl font-bold text-green-600 mb-6">{title}</h2>
+      <div className="max-w-6xl mx-auto">{content}</div>
+    </div>
   </motion.div>
 );
 
@@ -64,24 +64,25 @@ const ResearchLabsScreen = () => (
   <Screen
     title="Squad Research Labs Across the Country"
     content={
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {researchLabs.map((lab, index) => (
-          <Col md={4} key={index}>
-            <Card className="mb-4 shadow-sm">
-              <Card.Body>
-                <Card.Title>{lab.name}</Card.Title>
-                <Card.Subtitle className="text-muted">{lab.location}</Card.Subtitle>
-                <Card.Text>
-                  <strong>Research Focus:</strong> {lab.researchFocus} <br />
-                  <strong>Approved Squads:</strong> {lab.squads.join(", ")} <br />
-                  <strong>Total Attended:</strong> {lab.totalAttended}
-                </Card.Text>
-                <Button variant="primary">View Lab</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-5">
+            <h3 className="text-xl font-semibold">{lab.name}</h3>
+            <h4 className="text-gray-500">{lab.location}</h4>
+            <p className="mt-3">
+              <strong>Research Focus:</strong> {lab.researchFocus} <br />
+              <strong>Approved Squads:</strong> {lab.squads.join(", ")} <br />
+              <strong>Total Attended:</strong> {lab.totalAttended}
+            </p>
+            <a
+              href="#"
+              className="mt-4 block w-full text-center bg-green-600 text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition duration-300"
+            >
+              View Lab
+            </a>
+          </div>
         ))}
-      </Row>
+      </div>
     }
   />
 );
@@ -91,20 +92,20 @@ const TestimonialsScreen = () => (
   <Screen
     title="Squad Leaders' Testimonials"
     content={
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((leader, index) => (
-          <Col md={4} key={index}>
-            <Card className="text-center mb-4 shadow-sm">
-              <Card.Img variant="top" src={leader.image} alt={leader.name} className="rounded-circle mt-3" style={{ width: "100px", height: "100px", margin: "0 auto" }} />
-              <Card.Body>
-                <Card.Title>{leader.name}</Card.Title>
-                <Card.Subtitle className="text-muted">{leader.location}</Card.Subtitle>
-                <Card.Text>"{leader.feedback}"</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div key={index} className="bg-white text-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-5">
+            <img
+              src={leader.image}
+              alt={leader.name}
+              className="rounded-full w-24 h-24 mx-auto mb-4"
+            />
+            <h3 className="font-semibold">{leader.name}</h3>
+            <h4 className="text-gray-500">{leader.location}</h4>
+            <p className="mt-2 italic">"{leader.feedback}"</p>
+          </div>
         ))}
-      </Row>
+      </div>
     }
   />
 );
@@ -118,3 +119,4 @@ const ResearchLabsAndTestimonials = () => (
 );
 
 export default ResearchLabsAndTestimonials;
+

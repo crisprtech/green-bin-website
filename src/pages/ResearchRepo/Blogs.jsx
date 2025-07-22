@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const blogs = [
@@ -8,7 +7,8 @@ const blogs = [
     category: "Waste Management",
     title: "Innovative Waste Solutions in Urban Areas",
     image: "waste-management.jpg",
-    excerpt: "Discover cutting-edge waste management techniques making cities cleaner.",
+    excerpt:
+      "Discover cutting-edge waste management techniques making cities cleaner.",
   },
   {
     id: 2,
@@ -49,42 +49,49 @@ const blogs = [
 
 const BlogScreen = () => {
   return (
-    <Container className="py-4">
+    <div className="container mx-auto py-8">
       {/* Introduction Section */}
       <motion.div
-        className="text-center mb-5"
+        className="text-center mb-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Image src="blog-intro.jpg" fluid className="rounded mb-3" />
-        <h2>Explore GreenBin Insights</h2>
-        <p className="text-muted">
-          Stay updated with the latest in waste management, sustainability, and eco-living.
+        <img
+          src="blog-intro.jpg"
+          alt="Blog Introduction"
+          className="rounded-lg mb-4 w-full h-auto"
+        />
+        <h2 className="text-3xl font-bold mb-2">Explore GreenBin Insights</h2>
+        <p className="text-gray-600">
+          Stay updated with the latest in waste management, sustainability, and
+          eco-living.
         </p>
       </motion.div>
 
       {/* Blog List */}
-      <Row>
-        {blogs.map((blog, index) => (
-          <Col md={4} key={blog.id} className="mb-4">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Card className="shadow-sm">
-                <Card.Img variant="top" src={blog.image} alt={blog.title} />
-                <Card.Body>
-                  <Card.Subtitle className="text-muted">{blog.category}</Card.Subtitle>
-                  <Card.Title>{blog.title}</Card.Title>
-                  <Card.Text>{blog.excerpt}</Card.Text>
-                </Card.Body>
-              </Card>
-            </motion.div>
-          </Col>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogs.map((blog) => (
+          <motion.div
+            key={blog.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img
+              src={blog.image}
+              alt={blog.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold">{blog.title}</h3>
+              <p className="text-sm text-gray-500 mb-2">{blog.category}</p>
+              <p className="text-gray-700">{blog.excerpt}</p>
+            </div>
+          </motion.div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 

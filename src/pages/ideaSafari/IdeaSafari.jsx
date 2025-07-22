@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const IdeaSafari = () => {
   return (
     <motion.div 
-      className="idea-safari min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 p-5"
+      className="idea-safari min-h-screen bg-gradient-to-r  p-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

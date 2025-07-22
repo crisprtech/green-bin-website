@@ -1,3 +1,4 @@
+
 import AboutUs from './AboutUs';
 import Introduction from './LandingIntro';
 import DifferentDestinations from './Destination';
@@ -9,51 +10,62 @@ import { motion } from 'framer-motion';
 const LandingPage = () => {
   return (
     <motion.div 
-      className="smart-ai-bins min-h-screen bg-gradient-to-r from-green-100 to-green-300 p-5"
+      className="smart-ai-bins min-h-screen p-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      {/* Introduction Section */}
       <motion.div 
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
+        className="mb-10"
       >
         <Introduction />
       </motion.div>
 
+      {/* Different Destinations Section */}
       <motion.div 
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
+        className="mb-10"
       >
         <DifferentDestinations />
       </motion.div>
 
+      {/* How We Make An Impact Section */}
       <motion.div 
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
+        className="mb-10"
       >
         <HowWeMakeAnImpact />
       </motion.div>
 
+      {/* About Us Section */}
       <motion.div 
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.8 }}
+        className="mb-10"
       >
         <AboutUs />
       </motion.div>
 
+      {/* Foreign Partners Section */}
       <motion.div 
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
+        className="mb-10"
       >
         <ForeignPartners />
       </motion.div>
 
+      {/* Footer Section */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -66,3 +78,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+

@@ -1,5 +1,5 @@
+
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
 
 const ForeignPartners = () => {
   const partners = [
@@ -34,28 +34,27 @@ const ForeignPartners = () => {
   ];
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4">Our Foreign Partners</h2>
-      <Row className="g-4">
+    <div className="my-10 max-w-6xl mx-auto px-4">
+      <h2 className="text-3xl font-bold text-center text-green-600 mb-6">Our Foreign Partners</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {partners.map((partner, index) => (
-          <Col key={index} md={6} lg={4}>
-            <Card className="h-100 shadow-sm border-0">
-              <Card.Body>
-                <Card.Title className="text-success">{partner.company}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  CEO: {partner.ceo}
-                </Card.Subtitle>
-                <Card.Text>
-                  <strong>Country:</strong> {partner.country}
-                </Card.Text>
-                <Card.Text className="fst-italic">"{partner.testimonial}"</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-green-600">{partner.company}</h3>
+              <h4 className="text-md text-gray-500 mb-2">CEO: {partner.ceo}</h4>
+              <p className="text-sm text-gray-700">
+                <strong>Country:</strong> {partner.country}
+              </p>
+              <p className="mt-4 text-gray-600 italic border-l-4 border-green-500 pl-4">
+                "{partner.testimonial}"
+              </p>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 
 export default ForeignPartners;
+

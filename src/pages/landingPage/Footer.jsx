@@ -1,84 +1,78 @@
+
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 
 const Footer = () => {
   return (
     <div>
       {/* Banner Image */}
-      <Image src="greenbin-footer.jpg" fluid className="w-100" />
+      <Image src="greenbin-footer.jpg" fluid className="w-full h-64 object-cover" />
 
       {/* Intro Section */}
-      <div className="bg-light py-5">
-        <Container>
-          <Row>
-            <Col>
-              <p className="text-center text-muted">
-                Join GreenBin in revolutionizing sustainability. Reduce waste, earn rewards, and support a greener future with every action you take!
-              </p>
-            </Col>
-          </Row>
-        </Container>
+      <div className="bg-gray-100 py-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-700 text-lg">
+            Join GreenBin in revolutionizing sustainability. Reduce waste, earn rewards, and support a greener future with every action you take!
+          </p>
+        </div>
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-dark text-light py-5">
-        <Container>
-          <Row>
-            {/* About GreenBin */}
-            <Col md={3}>
-              <h5>GreenBin</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-light">About Us</a></li>
-                <li><a href="#" className="text-light">Our Mission</a></li>
-                <li><a href="#" className="text-light">How It Works</a></li>
-                <li><a href="#" className="text-light">Contact</a></li>
-              </ul>
-            </Col>
+      <footer className="bg-green-800 text-white py-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* About GreenBin */}
+          <div>
+            <h5 className="font-bold text-xl mb-4">GreenBin</h5>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-300">About Us</a></li>
+              <li><a href="#" className="hover:text-green-300">Our Mission</a></li>
+              <li><a href="#" className="hover:text-green-300">How It Works</a></li>
+              <li><a href="#" className="hover:text-green-300">Contact</a></li>
+            </ul>
+          </div>
 
-            {/* Sustainability & Impact */}
-            <Col md={3}>
-              <h5>Sustainability</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-light">Eco Rewards</a></li>
-                <li><a href="#" className="text-light">Green Initiatives</a></li>
-                <li><a href="#" className="text-light">Carbon Footprint</a></li>
-                <li><a href="#" className="text-light">Circular Economy</a></li>
-              </ul>
-            </Col>
+          {/* Sustainability & Impact */}
+          <div>
+            <h5 className="font-bold text-xl mb-4">Sustainability</h5>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-300">Eco Rewards</a></li>
+              <li><a href="#" className="hover:text-green-300">Green Initiatives</a></li>
+              <li><a href="#" className="hover:text-green-300">Carbon Footprint</a></li>
+              <li><a href="#" className="hover:text-green-300">Circular Economy</a></li>
+            </ul>
+          </div>
 
-            {/* Community & Engagement */}
-            <Col md={3}>
-              <h5>Community</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-light">Green Ambassadors</a></li>
-                <li><a href="#" className="text-light">Volunteer</a></li>
-                <li><a href="#" className="text-light">Eco Challenges</a></li>
-                <li><a href="#" className="text-light">Sustainability Blog</a></li>
-              </ul>
-            </Col>
+          {/* Community & Engagement */}
+          <div>
+            <h5 className="font-bold text-xl mb-4">Community</h5>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-300">Green Ambassadors</a></li>
+              <li><a href="#" className="hover:text-green-300">Volunteer</a></li>
+              <li><a href="#" className="hover:text-green-300">Eco Challenges</a></li>
+              <li><a href="#" className="hover:text-green-300">Sustainability Blog</a></li>
+            </ul>
+          </div>
 
-            {/* Support & Help */}
-            <Col md={3}>
-              <h5>Support</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-light">FAQs</a></li>
-                <li><a href="#" className="text-light">Help Center</a></li>
-                <li><a href="#" className="text-light">Report an Issue</a></li>
-                <li><a href="#" className="text-light">Terms & Privacy</a></li>
-              </ul>
-            </Col>
-          </Row>
+          {/* Support & Help */}
+          <div>
+            <h5 className="font-bold text-xl mb-4">Support</h5>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-green-300">FAQs</a></li>
+              <li><a href="#" className="hover:text-green-300">Help Center</a></li>
+              <li><a href="#" className="hover:text-green-300">Report an Issue</a></li>
+              <li><a href="#" className="hover:text-green-300">Terms & Privacy</a></li>
+            </ul>
+          </div>
+        </div>
 
-          {/* Footer Bottom */}
-          <Row className="mt-4">
-            <Col className="text-center">
-              <p className="text-muted">&copy; {new Date().getFullYear()} GreenBin. All rights reserved.</p>
-            </Col>
-          </Row>
-        </Container>
+        {/* Footer Bottom */}
+        <div className="mt-8 text-center">
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} GreenBin. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
 };
 
 export default Footer;
+

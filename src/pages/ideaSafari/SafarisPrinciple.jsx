@@ -1,5 +1,3 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
 
 const HowItWorks = () => {
   const steps = [
@@ -31,22 +29,28 @@ const HowItWorks = () => {
   ];
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4">How Idea Safari Works</h2>
-      <Row className="g-4">
+    <div className="my-10 max-w-6xl mx-auto px-4">
+      <h2 className="text-center text-3xl font-bold text-green-600 mb-8">
+        How Idea Safari Works
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {steps.map((step, index) => (
-          <Col key={index} md={6} lg={4}>
-            <Card className="h-100 shadow-sm border-0">
-              <Card.Body>
-                <Card.Title className="text-primary">{step.title}</Card.Title>
-                <Card.Text>{step.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 p-6"
+          >
+            <h3 className="text-xl font-semibold text-green-500 mb-3">{step.title}</h3>
+            <p className="text-gray-700">{step.description}</p>
+            <div className="mt-4 flex items-center justify-between">
+              <span className="text-sm text-gray-500">Step {index + 1}</span>
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 
 export default HowItWorks;
+

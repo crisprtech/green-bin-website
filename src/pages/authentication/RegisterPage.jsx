@@ -54,67 +54,99 @@ const RegisterPage = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="d-flex justify-content-center align-items-center min-vh-100 bg-light"
+      className="flex justify-center items-center min-h-screen "
     >
-      <Container className="p-4 border rounded shadow-sm bg-white w-50">
-        <h2 className="text-center mb-4">Register</h2>
+      <Container className="p-8  rounded-lg shadow-lg bg-white w-full max-w-md">
+        <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
+          Create an Account
+        </h2>
 
         {successMessage && <Alert variant="success">{successMessage}</Alert>}
 
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Username</Form.Label>
+          <Form.Group className="mb-4">
+            <Form.Label className="text-gray-700">Username</Form.Label>
             <Form.Control
               type="text"
               name="username"
               value={formData.username}
               onChange={handleChange}
               isInvalid={!!errors.username}
+              className="border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
             />
-            <Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.username}
+            </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Email</Form.Label>
+          <Form.Group className="mb-4">
+            <Form.Label className="text-gray-700">Email</Form.Label>
             <Form.Control
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               isInvalid={!!errors.email}
+              className="border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
             />
-            <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.email}
+            </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Password</Form.Label>
+          <Form.Group className="mb-4">
+            <Form.Label className="text-gray-700">Password</Form.Label>
             <Form.Control
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
               isInvalid={!!errors.password}
+              className="border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
             />
-            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.password}
+            </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Select Role</Form.Label>
-            <Form.Select name="role" value={formData.role} onChange={handleChange} isInvalid={!!errors.role}>
+          <Form.Group className="mb-4">
+            <Form.Label className="text-gray-700">Select Role</Form.Label>
+            <Form.Select
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
+              isInvalid={!!errors.role}
+              className="border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+            >
               <option value="">Choose...</option>
               <option value="Innovator">Innovator</option>
               <option value="Implementing Partner">Implementing Partner</option>
               <option value="Business Enterprise">Business Enterprise</option>
             </Form.Select>
-            <Form.Control.Feedback type="invalid">{errors.role}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">
+              {errors.role}
+            </Form.Control.Feedback>
           </Form.Group>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="primary" type="submit" className="w-100">
+            <Button
+              variant="primary"
+              type="submit"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg py-2"
+            >
               Register
             </Button>
           </motion.div>
         </Form>
+
+        <div className="text-center mt-4">
+          <p className="text-gray-600">
+            Already have an account?{" "}
+            <a href="/login" className="text-green-600 hover:underline">
+              Login here
+            </a>
+          </p>
+        </div>
       </Container>
     </motion.div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const fellowshipIntro = {
   title: "GreenBin Waste Management Fellowship",
@@ -71,11 +70,12 @@ const Screen = ({ title, content }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
+    className="py-10 bg-gray-50"
   >
-    <Container className="py-4">
-      <h2 className="text-center mb-4">{title}</h2>
-      {content}
-    </Container>
+    <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
+      {title}
+    </h2>
+    <div className="max-w-6xl mx-auto">{content}</div>
   </motion.div>
 );
 
@@ -83,19 +83,24 @@ const FellowshipIntro = () => (
   <Screen
     title={fellowshipIntro.title}
     content={
-      <Row className="align-items-center">
-        <Col md={6}>
-          <motion.img
-            src={fellowshipIntro.image}
-            alt="Fellowship"
-            className="img-fluid rounded"
-          />
-        </Col>
-        <Col md={6}>
-          <p>{fellowshipIntro.description}</p>
-          <Button variant="success">Join Now</Button>
-        </Col>
-      </Row>
+      <div className="flex flex-col md:flex-row items-center">
+        <motion.img
+          src={fellowshipIntro.image}
+          alt="Fellowship"
+          className="w-full md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0"
+        />
+        <div className="md:w-1/2 md:pl-6">
+          <p className="text-lg text-gray-700 mb-4">
+            {fellowshipIntro.description}
+          </p>
+          <a
+            href="#"
+            className="inline-block bg-green-600 text-white font-semibold rounded-lg px-6 py-3 hover:bg-green-700 transition duration-300"
+          >
+            Join Now
+          </a>
+        </div>
+      </div>
     }
   />
 );
@@ -104,23 +109,27 @@ const ProjectsScreen = () => (
   <Screen
     title="Upcoming Waste Management Projects"
     content={
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <Col md={4} key={index} className="mb-4">
-            <Card>
-              <Card.Body>
-                <Card.Title>{project.name}</Card.Title>
-                <Card.Text>
-                  Location: {project.location} <br />
-                  Type: {project.type} <br />
-                  Squads: {project.squads}
-                </Card.Text>
-                <Button variant="primary">View Project</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white rounded-md shadow-lg p-5 hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 className="text-xl font-semibold">{project.name}</h3>
+            <p className="text-gray-600">
+              Location: {project.location} <br />
+              Type: {project.type} <br />
+              Squads: {project.squads}
+            </p>
+            <a
+              href="#"
+              className="mt-4 inline-block bg-orange-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-700 transition duration-300"
+            >
+              View Project
+            </a>
+          </div>
         ))}
-      </Row>
+      </div>
     }
   />
 );
@@ -129,19 +138,18 @@ const CompletedProjectsScreen = () => (
   <Screen
     title="Recently Completed Projects"
     content={
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {completedProjects.map((project, index) => (
-          <Col md={4} key={index} className="mb-4">
-            <Card>
-              <Card.Body>
-                <Card.Title>{project.name}</Card.Title>
-                <Card.Text>Location: {project.location}</Card.Text>
-                <Card.Text>Status: {project.status}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-lg p-5 hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 className="text-xl font-semibold">{project.name}</h3>
+            <p className="text-gray-600">Location: {project.location}</p>
+            <p className="text-gray-600">Status: {project.status}</p>
+          </div>
         ))}
-      </Row>
+      </div>
     }
   />
 );
@@ -150,18 +158,17 @@ const TestimonialsScreen = () => (
   <Screen
     title="Testimonials from Participants"
     content={
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
-          <Col md={4} key={index} className="mb-4">
-            <Card>
-              <Card.Body>
-                <Card.Title>{testimonial.name}</Card.Title>
-                <Card.Text>"{testimonial.feedback}"</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-lg p-5 hover:shadow-xl transition-shadow duration-300"
+          >
+            <h3 className="text-xl font-semibold">{testimonial.name}</h3>
+            <p className="text-gray-600 italic">"{testimonial.feedback}"</p>
+          </div>
         ))}
-      </Row>
+      </div>
     }
   />
 );

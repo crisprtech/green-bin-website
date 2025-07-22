@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from '../src/pages/landingPage/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

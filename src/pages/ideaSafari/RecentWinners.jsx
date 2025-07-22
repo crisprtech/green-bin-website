@@ -1,5 +1,3 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
 
 const RecentAmbassadors = () => {
   const ambassadors = [
@@ -41,28 +39,30 @@ const RecentAmbassadors = () => {
   ];
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4">Recent Idea Safari Ambassadors</h2>
-      <Row className="g-4">
+    <div className="my-10 max-w-6xl mx-auto px-4">
+      <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
+        Recent Idea Safari Ambassadors
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ambassadors.map((ambassador, index) => (
-          <Col key={index} md={6} lg={4}>
-            <Card className="h-100 shadow-sm border-0">
-              <Card.Body>
-                <Card.Title className="text-primary">{ambassador.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  {ambassador.project}
-                </Card.Subtitle>
-                <Card.Text>
-                  <strong>Country Visited:</strong> {ambassador.country}
-                </Card.Text>
-                <Card.Text className="fst-italic">{ambassador.testimonial}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+          >
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-primary">{ambassador.name}</h3>
+              <h4 className="text-lg text-gray-500 mb-2">{ambassador.project}</h4>
+              <p className="text-gray-700">
+                <strong>Country Visited:</strong> {ambassador.country}
+              </p>
+              <p className="mt-4 text-gray-600 italic">"{ambassador.testimonial}"</p>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 
 export default RecentAmbassadors;
+

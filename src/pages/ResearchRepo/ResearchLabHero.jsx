@@ -1,41 +1,50 @@
-import React from 'react';
-import { Container, Button, Row, Col } from 'react-bootstrap';
-import './ResearchLab.css'; // Ensure this file exists for additional styling
+import React from "react";
 
 const ResearchLabsHero = () => {
-    return (
-        <Container fluid className="research-hero d-flex align-items-center text-center text-white">
-            <div className="overlay"></div> {/* Dark overlay for better contrast */}
-            <Row className="justify-content-center">
-                <Col md={8}>
-                    <h1 className="display-4 fw-bold">Squad Labs: Innovate, Research, Create</h1>
-                    <p className="lead">
-                        Hands-on experience for researchers & innovators. Attend workshops, develop ideas, and drive sustainable solutions in county-based labs.
-                    </p>
-                    <div className="d-flex justify-content-center gap-3">
-                        <Button variant="primary" href="#labs-network" size="lg">Explore Labs</Button>
-                        <Button variant="outline-light" href="#join-research" size="lg">Join a Lab</Button>
-                    </div>
-                </Col>
-            </Row>
-
-            {/* Quick Highlights Section */}
-            <Row className="hero-footer mt-5 text-center">
-                <Col xs={12} sm={4}>
-                    <h2>20+</h2>
-                    <p>Research Labs Across Counties</p>
-                </Col>
-                <Col xs={12} sm={4}>
-                    <h2>100+</h2>
-                    <p>Innovations Developed</p>
-                </Col>
-                <Col xs={12} sm={4}>
-                    <h2>500+</h2>
-                    <p>Experts & Researchers</p>
-                </Col>
-            </Row>
-        </Container>
-    );
+  return (
+    <div className="relative flex items-center text-center text-white  h-screen">
+      <div className="absolute inset-0  opacity-50"></div>{" "}
+      {/* Dark overlay for better contrast */}
+      <div className="relative z-10 p-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-black">
+          Squad Labs: Innovate, Research, Create
+        </h1>
+        <p className="mt-3 mb-4 text-lg text-black">
+          Hands-on experience for researchers & innovators. Attend workshops,
+          develop ideas, and drive sustainable solutions in county-based labs.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a
+            href="#labs-network"
+            className="bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg px-5 py-3 shadow-lg transition duration-300"
+          >
+            Explore Labs
+          </a>
+          <a
+            href="#join-research"
+            className="border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-lg px-5 py-3 transition duration-300"
+          >
+            Join a Lab
+          </a>
+        </div>
+      </div>
+      {/* Quick Highlights Section */}
+      <div className="mt-5 flex justify-around w-full max-w-4xl mx-auto text-center">
+        <div>
+          <h2 className="text-3xl font-bold">20+</h2>
+          <p className="text-lg">Research Labs Across Counties</p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold">100+</h2>
+          <p className="text-lg">Innovations Developed</p>
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold">500+</h2>
+          <p className="text-lg">Experts & Researchers</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ResearchLabsHero;
