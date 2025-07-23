@@ -55,13 +55,25 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-                Register
+                GreenBin Carbon Registry System
               </DropdownItem>
               <DropdownItem
                 to="/GreenCarbonPoints/OtherServices/DashBoard"
                 icon={Globe}
               >
-                Trade
+                Explore Carbon Markets
+              </DropdownItem>
+              <DropdownItem
+                to="/GreenCarbonPoints/OtherServices/DashBoard"
+                icon={Globe}
+              >
+                Participate in GreenBin DAO
+              </DropdownItem>
+              <DropdownItem
+                to="/GreenCarbonPoints/OtherServices/DashBoard"
+                icon={Globe}
+              >
+                Carbon Security Exchange
               </DropdownItem>
             </Dropdown>
 
@@ -71,10 +83,13 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Idea Safari")}
             >
               <DropdownItem to="/ideaSafari/ApplyNow" icon={Lightbulb}>
-                Apply Now
+                Access Idea Safari Platform
               </DropdownItem>
               <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
-                Discover More
+                Check Eligibility criteria
+              </DropdownItem>
+              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+                Idea Safari Partnerships
               </DropdownItem>
             </Dropdown>
 
@@ -84,10 +99,19 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Climate Intelligence")}
             >
               <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
-                Discover GreenBins
+                Green Programs and Sustainable Projects
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
-                Waste Fellowship
+                Organization Departments Overview
+              </DropdownItem>
+              <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
+                News,Events and Summits
+              </DropdownItem>
+              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+                Workshops and Climate Bootcamps
+              </DropdownItem>
+              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+                Green Games
               </DropdownItem>
             </Dropdown>
 
@@ -97,13 +121,17 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Research")}
             >
               <DropdownItem to="/ResearchRepo/ResearchRepo" icon={BookOpen}>
-                Green Education
+                Research Programs and Ipod kits
               </DropdownItem>
               <DropdownItem to="/ResearchRepo/Blogs" icon={Brain}>
-                Green Blogs
+                Green Research Articles and Blogs
               </DropdownItem>
               <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
-                Research Labs
+                Research Labs and Consortia
+              </DropdownItem>
+
+              <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
+                Internship and Ambassador Programs
               </DropdownItem>
             </Dropdown>
 
@@ -113,10 +141,17 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Support")}
             >
               <DropdownItem to="/ResearchRepo/HelpCenter" icon={HelpCircle}>
-                Help Center
+                Help Center Repository
               </DropdownItem>
               <DropdownItem to="/OurTeam" icon={BadgeCheck}>
-                Our Team
+                Our Team and Partners
+              </DropdownItem>
+
+              <DropdownItem to="/landingPage/ContactUs" icon={BadgeCheck}>
+                Visit or Contact Us
+              </DropdownItem>
+              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+                Our Services
               </DropdownItem>
             </Dropdown>
 
@@ -168,7 +203,7 @@ const Dropdown = ({ title, children, isOpen, onToggle }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute md:absolute left-0 mt-2 md:mt-2 w-56 bg-white rounded-xl shadow-xs z-50">
+        <div className="absolute left-0 mt-2 min-w-[14rem] bg-white rounded-xl shadow-xs z-50 whitespace-nowrap">
           {children}
         </div>
       )}
