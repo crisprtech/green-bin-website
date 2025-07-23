@@ -39,7 +39,7 @@ const Header = () => {
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <Menu className="w-6 h-6 text-gray-800" />
+          <Menu className="w-9 h-9 text-gray-800  mr-10" />
         </button>
 
         {/* Navigation */}
