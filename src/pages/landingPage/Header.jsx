@@ -46,7 +46,7 @@ const Header = () => {
         <div
           className={`${
             isMobileMenuOpen ? "block" : "hidden"
-          } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:flex md:items-center shadow md:shadow-none z-40`}
+          } absolute md:static top-10 left-0 w-full md:w-auto bg-white md:flex md:items-center shadow-xs md:shadow-none z-40`}
         >
           <div className="flex flex-col md:flex-row md:items-center w-full md:space-x-4">
             <Dropdown
@@ -79,7 +79,7 @@ const Header = () => {
             </Dropdown>
 
             <Dropdown
-              title="Climate Intelligence"
+              title="GreenBin Insider"
               isOpen={activeDropdown === "Climate Intelligence"}
               onToggle={() => handleDropdownToggle("Climate Intelligence")}
             >
