@@ -63,10 +63,7 @@ const Header = () => {
               >
                 Explore Carbon Markets
               </DropdownItem>
-              <DropdownItem
-                to="/GreenCarbonPoints/OtherServices/DashBoard"
-                icon={Globe}
-              >
+              <DropdownItem to="/GreenCarbonPoints/GreenCarbonDAO" icon={Globe}>
                 Participate in GreenBin DAO
               </DropdownItem>
               <DropdownItem
@@ -74,6 +71,10 @@ const Header = () => {
                 icon={Globe}
               >
                 Carbon Security Exchange
+              </DropdownItem>
+
+              <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
+                Get Access to GreenBin Assets and Bonds
               </DropdownItem>
             </Dropdown>
 
@@ -150,8 +151,11 @@ const Header = () => {
               <DropdownItem to="/landingPage/ContactUs" icon={BadgeCheck}>
                 Visit or Contact Us
               </DropdownItem>
-              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+              <DropdownItem to="/Services" icon={Users}>
                 Our Services
+              </DropdownItem>
+              <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
+                Donate
               </DropdownItem>
             </Dropdown>
 

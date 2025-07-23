@@ -1,82 +1,86 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import React from "react";
+import {
+  FaRegUser,
+  FaFileAlt,
+  FaCheckCircle,
+  FaGlobeAfrica,
+  FaLock,
+} from "react-icons/fa";
 
-const donationCategories = [
-  { id: '1', name: 'Tree Planting', impact: '1000 points = 1 tree planted', pointsRequired: 1000 },
-  { id: '2', name: 'Waste Management', impact: '2000 points = 1 community clean-up', pointsRequired: 2000 },
-  { id: '3', name: 'Community Support', impact: '4500 points = support for 1 individual', pointsRequired: 4500 },
-  { id: '4', name: 'Fight Hunger Strike', impact: '5000 points = support for 10 individuals', pointsRequired: 5000 },
-  { id: '5', name: 'Education Support', impact: '15000 points = school supplies for 5 children', pointsRequired: 15000 },
-  { id: '6', name: 'Health Initiatives', impact: '8000 points = medical aid for 5 individuals', pointsRequired: 8000 },
+const steps = [
+  {
+    title: "Create GreenBin Account",
+    description:
+      "Sign up using your email and organization details to access your GreenBin dashboard.",
+    icon: <FaRegUser size={24} className="text-green-600" />,
+  },
+  {
+    title: "Submit Business Profile",
+    description:
+      "Provide startup or enterprise information including sector, carbon focus area, and sustainability goals.",
+    icon: <FaFileAlt size={24} className="text-green-600" />,
+  },
+  {
+    title: "Verification & KYC",
+    description:
+      "GreenBin verifies your identity, KYC documents, and validates your climate impact profile.",
+    icon: <FaCheckCircle size={24} className="text-green-600" />,
+  },
+  {
+    title: "DAO Access & Carbon Wallet",
+    description:
+      "Gain access to GreenBin DAO, voting rights, and your digital carbon asset wallet.",
+    icon: <FaGlobeAfrica size={24} className="text-green-600" />,
+  },
+  {
+    title: "Secure & Trade",
+    description:
+      "Start trading carbon credits, issuing green bonds, and accessing rewards securely.",
+    icon: <FaLock size={24} className="text-green-600" />,
+  },
 ];
 
-const InvestmentDonation = () => {
-  const [userType, setUserType] = useState('');
-  const [donationCategory, setDonationCategory] = useState('');
-  const [points, setPoints] = useState(0);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`User Type: ${userType}, Donation Category: ${donationCategory}, Points: ${points}`);
-  };
-
+const OnboardingSteps = () => {
   return (
-    <Container className="py-4">
-      <h2 className="text-center mb-4">Donate with GCPs</h2>
-      <Row>
-        {donationCategories.map((category) => (
-          <Col md={6} lg={4} key={category.id} className="mb-3">
-            <Card>
-              <Card.Body>
-                <Card.Title>{category.name}</Card.Title>
-                <Card.Text>{category.impact}</Card.Text>
-                <Button variant="success">Donate</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <div className="text-center mt-3">
-        <Button variant="secondary">Show More</Button>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white py-12 px-6">
+      {/* Hero */}
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">
+          Onboarding & Verification Process
+        </h1>
+        <p className="text-gray-700 text-lg">
+          Seamlessly register your startup or organization into the GreenBin
+          Carbon Registry and start accessing digital climate assets.
+        </p>
       </div>
 
-      <Form onSubmit={handleSubmit} className="mt-4 p-4 border rounded bg-light">
-        <h4 className="text-center">Make a Donation</h4>
-        <Form.Group className="mb-3">
-          <Form.Label>Join as:</Form.Label>
-          <Form.Select value={userType} onChange={(e) => setUserType(e.target.value)} required>
-            <option value="">Select...</option>
-            <option value="implementingPartner">Implementing Partner</option>
-            <option value="ecoGreenBusiness">EcoGreenBusiness Enterprise</option>
-            <option value="innovator">Innovator</option>
-          </Form.Select>
-        </Form.Group>
+      {/* Steps Timeline */}
+      <div className="max-w-5xl mx-auto space-y-10 relative border-l-4 border-green-600 pl-6">
+        {steps.map((step, index) => (
+          <div key={index} className="relative">
+            {/* Dot and Line */}
+            <div className="absolute -left-8 top-1">
+              <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                {step.icon}
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-green-800">{step.title}</h3>
+            <p className="text-gray-600 mt-1">{step.description}</p>
+          </div>
+        ))}
+      </div>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Donation Category:</Form.Label>
-          <Form.Select value={donationCategory} onChange={(e) => setDonationCategory(e.target.value)} required>
-            <option value="">Select...</option>
-            {donationCategories.map((category) => (
-              <option key={category.id} value={category.name}>{category.name} ({category.impact})</option>
-            ))}
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Label>Points to Donate:</Form.Label>
-          <Form.Control
-            type="number"
-            value={points}
-            onChange={(e) => setPoints(e.target.value)}
-            min="0"
-            required
-          />
-        </Form.Group>
-
-        <Button variant="primary" type="submit" className="w-100">Donate</Button>
-      </Form>
-    </Container>
+      {/* CTA */}
+      <div className="text-center mt-16">
+        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+          Ready to join the carbon economy?
+        </h2>
+        <button className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition">
+          Start Your Onboarding
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default InvestmentDonation;
+export default OnboardingSteps;

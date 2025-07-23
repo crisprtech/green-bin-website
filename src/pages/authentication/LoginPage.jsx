@@ -160,7 +160,7 @@ const LoginPage = () => {
         </div>
 
         {/* Image Section */}
-        <div className="hidden md:flex w-full rounded-3xl">
+        <div className="hidden  md:flex w-full rounded-3xl">
           <img
             src={loginImage}
             alt="Login Illustration"

@@ -1,100 +1,125 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaLeaf, FaUsers, FaLightbulb } from "react-icons/fa";
-import backgroundImage from "../../assets/lan-d.jpg"; // Adjust path as needed
+import {
+  FaLeaf,
+  FaLightbulb,
+  FaUsers,
+  FaCoins,
+  FaGlobeAfrica,
+  FaHandshake,
+} from "react-icons/fa";
 
 const Introduction = () => {
   const [email, setEmail] = useState("");
 
   const handleJoinWaitlist = () => {
-    console.log("Joining waitlist with email:", email);
+    alert("Thank you for joining the waitlist!");
+    setEmail("");
   };
 
   return (
-    <div
-      className="relative bg-cover bg-center rounded-2xl bg-no-repeat min-h-[90vh] flex items-end justify-center"
-      style={{
-        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url(${backgroundImage})`,
-      }}
-    >
-      {/* Overlay content */}
-      <div className="container mx-auto px-6 py-10 backdrop-blur-xs rounded-lg shadow-sm">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Text Section */}
-          <div>
-            <motion.h1
-              className="mb-4 text-4xl font-extrabold text-gray-800"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Join GreenBin Research Organization
-            </motion.h1>
-            <motion.p
-              className="mb-6 text-gray-800"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              GreenBin Research is dedicated to driving green innovations,
-              promoting sustainability, and integrating cutting-edge research,
-              including Quantum Computing, Climate Technology, and Green
-              Technology to shape a greener future.
-            </motion.p>
-            <div className="flex flex-col sm:flex-row mb-4">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <button
-                className="mt-2 sm:mt-0 sm:ml-2 px-4 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
-                onClick={handleJoinWaitlist}
-              >
-                Join Waitlist
-              </button>
-            </div>
-          </div>
+    <div className="bg-gradient-to-b from-green-100 to-white py-16 px-4 md:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+        {/* Left Main Section */}
+        <div className="w-full md:w-2/3">
+          <motion.h1
+            className="mb-4 text-4xl md:text-5xl font-extrabold text-gray-800"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Join GreenBin Research Organization
+          </motion.h1>
+          <motion.p
+            className="mb-6 text-lg md:text-xl text-gray-700"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            GreenBin Research is a sectoral registry empowering startups,
+            businesses, and climate enthusiasts to trade in carbon credits using
+            our digital currency, engage in gamified sustainability, participate
+            in a climate-focused DAO, and explore global ideas through the Idea
+            Safari fellowship.
+          </motion.p>
 
-          {/* Right Icons Section */}
-          <div className="flex flex-col items-end">
-            {[
-              {
-                icon: FaLeaf,
-                text: "Sustainable Impact",
-                sub: "Driving Change",
-              },
-              {
-                icon: FaLightbulb,
-                text: "Innovations",
-                sub: "Eco-Tech Solutions",
-              },
-              {
-                icon: FaUsers,
-                text: "Community Growth",
-                sub: "+ 10,000 Members",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="mb-4 flex items-center p-4 rounded-4xl bg-white/70 shadow-xl w-full"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <item.icon className="text-green-600 mr-3" size={24} />
-                <div>
-                  <span className="font-bold text-gray-800">{item.text}</span>
-                  <br />
-                  <span className="text-green-600 font-semibold">
-                    {item.sub}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
+          <motion.ul
+            className="mb-6 text-gray-700 list-disc pl-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            <li>Onboard your startup and access carbon markets</li>
+            <li>Earn, trade, and stake carbon credits digitally</li>
+            <li>Join global sustainability projects via Idea Safari</li>
+            <li>Co-govern climate tech through the GreenBin DAO</li>
+          </motion.ul>
+
+          <div className="flex flex-col sm:flex-row mb-4">
+            <input
+              type="email"
+              placeholder="Email address"
+              className="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button
+              className="mt-2 sm:mt-0 sm:ml-2 px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
+              onClick={handleJoinWaitlist}
+            >
+              Join Waitlist
+            </button>
           </div>
+        </div>
+
+        {/* Right Icon Section */}
+        <div className="w-full md:w-1/3 flex flex-col items-center md:items-end">
+          {[
+            {
+              icon: FaLeaf,
+              text: "Sustainable Impact",
+              sub: "Driving Change through Innovation",
+            },
+            {
+              icon: FaCoins,
+              text: "Carbon Digital Credits",
+              sub: "Trade, Stake, and Earn",
+            },
+            {
+              icon: FaGlobeAfrica,
+              text: "Idea Safari",
+              sub: "Global Climate Tech Exposure",
+            },
+            {
+              icon: FaHandshake,
+              text: "DAO Participation",
+              sub: "Co-Govern Climate Decisions",
+            },
+            {
+              icon: FaUsers,
+              text: "Community Growth",
+              sub: "+10,000 Members",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="mb-4 flex items-center p-4 rounded-3xl bg-white/70 shadow-lg w-full"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 }}
+            >
+              <item.icon className="text-green-600 mr-4" size={28} />
+              <div>
+                <span className="font-bold text-gray-800 text-lg">
+                  {item.text}
+                </span>
+                <br />
+                <span className="text-green-600 font-semibold text-sm">
+                  {item.sub}
+                </span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

@@ -1,78 +1,84 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  FaLeaf,
+  FaGlobeAfrica,
+  FaHandshake,
+  FaChartLine,
+} from "react-icons/fa";
+import carbonImg from "../../assets/business.jpg"; // Replace with your own image
 
 const Dashboard = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* Introduction Section */}
-      <div className="mb-8">
-        <div className="bg-white shadow-md p-6 rounded-lg text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            🌿 Welcome to Green Carbon Points (GCPs)!
-          </h2>
-          <p className="text-gray-700">
-            Green Carbon Points (GCPs) empower individuals to participate in the
-            green circular economy. Earn GCPs by recycling, using renewable
-            energy, and supporting eco-friendly initiatives. Redeem GCPs for
-            sustainable products, donate to green causes, or exchange them for
-            exclusive rewards!
-          </p>
-        </div>
-      </div>
+    <div className="bg-white pt-20 pb-16 px-4 md:px-8 lg:px-16 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+      {/* Left Section */}
+      <div className="md:w-1/2 space-y-6">
+        <motion.h1
+          className="text-4xl md:text-5xl font-extrabold text-green-700 leading-tight"
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          GreenBin Carbon Registration System
+        </motion.h1>
 
-      {/* Green Bin & Circular Economy */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white shadow-md p-6 rounded-lg">
-          <h4 className="text-xl font-semibold mb-2">
-            ♻️ The Role of Green Bin
-          </h4>
-          <p className="text-gray-700 mb-4">
-            Green Bin is at the heart of the green circular economy. It allows
-            users to recycle waste efficiently, reducing environmental pollution
-            while earning valuable GCPs. Get started by depositing recyclables
-            and watching your impact grow!
-          </p>
-          <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
-            Learn More
+        <motion.p
+          className="text-gray-700 text-lg"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          Onboard your business or project into the GreenBin Carbon Registry — a
+          gateway to transparent carbon credit issuance, trading, and tracking
+          powered by blockchain and green finance protocols.
+        </motion.p>
+
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          {[
+            { icon: FaGlobeAfrica, title: "Global Marketplace" },
+            { icon: FaLeaf, title: "Verified Green Credits" },
+            { icon: FaHandshake, title: "DAO Participation" },
+            { icon: FaChartLine, title: "Carbon Asset Bonds" },
+          ].map((feature, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center space-x-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 + index * 0.2 }}
+            >
+              <feature.icon className="text-green-600" size={22} />
+              <span className="text-gray-800 font-medium">{feature.title}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+        >
+          <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+            Get Registered Now
           </button>
-        </div>
-
-        <div className="bg-white shadow-md p-6 rounded-lg">
-          <h4 className="text-xl font-semibold mb-2">
-            🌍 Circular Economy Model
-          </h4>
-          <p className="text-gray-700 mb-4">
-            GCPs promote a circular economy where waste is minimized, and
-            resources are reused. Earn EcoPerks as you contribute to
-            sustainability and become a part of the green movement!
-          </p>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-            Join the Movement
-          </button>
-        </div>
+        </motion.div>
       </div>
 
-      {/* How to Earn & Redeem GCPs */}
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white shadow-md p-6 rounded-lg">
-          <h4 className="text-xl font-semibold mb-4">💰 How to Earn GCPs</h4>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Recycle waste at Green Bin stations</li>
-            <li>Use solar energy or eco-friendly transport</li>
-            <li>Participate in community clean-up drives</li>
-            <li>Engage in carbon offset programs</li>
-          </ul>
-        </div>
-
-        <div className="bg-white shadow-md p-6 rounded-lg">
-          <h4 className="text-xl font-semibold mb-4">🎁 How to Use GCPs</h4>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Buy eco-friendly products & services</li>
-            <li>Donate to environmental initiatives</li>
-            <li>Exchange GCPs for exclusive EcoPerks</li>
-            <li>Invest in green projects</li>
-          </ul>
-        </div>
-      </div>
+      {/* Right Image */}
+      <motion.div
+        className="md:w-1/2"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src={carbonImg}
+          alt="GreenBin Carbon Registration"
+          className="rounded-xl shadow-lg object-cover w-full h-auto max-h-[400px]"
+        />
+      </motion.div>
     </div>
   );
 };
