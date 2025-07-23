@@ -24,7 +24,7 @@ const HowWeMakeAnImpact = () => {
         </button>
       </div>
 
-      <div className="flex mb-8">
+      <div className="flex flex-row  mb-8">
         {/* Image on the left */}
         <div className="w-1/2 mr-4 flex  justify-center">
           <img

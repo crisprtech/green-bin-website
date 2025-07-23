@@ -51,7 +51,7 @@ const LoginPage = () => {
 
   return (
     <Container className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-row w-full max-w-4xl bg-white shadow-lg rounded-lg">
+      <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-lg">
         {/* Login Form Section */}
         <div className="p-8 w-full">
           <h2 className="text-center text-2xl font-bold text-green-600 mb-6">
@@ -72,7 +72,7 @@ const LoginPage = () => {
                 value={formData.role}
                 onChange={handleChange}
                 isInvalid={!!errors.role}
-                className="border-gray-300 rounded-md h-10 shadow-xs focus:ring-2 focus:ring-green-500"
+                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
               >
                 <option value="innovator">Innovator</option>
                 <option value="business_enterprise">Business Enterprise</option>
@@ -95,7 +95,7 @@ const LoginPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 isInvalid={!!errors.email}
-                className="border-gray-300 rounded-md h-10 shadow-xs focus:ring-2 focus:ring-green-500"
+                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
               />
               <Form.Control.Feedback type="invalid">
                 {errors.email}
@@ -112,7 +112,7 @@ const LoginPage = () => {
                 value={formData.password}
                 onChange={handleChange}
                 isInvalid={!!errors.password}
-                className="border-gray-300 rounded-md h-10 shadow-xs focus:ring-2 focus:ring-green-500"
+                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
               />
               <Form.Control.Feedback type="invalid">
                 {errors.password}
@@ -137,7 +137,7 @@ const LoginPage = () => {
             <Button
               variant="primary"
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl  py-2 shadow-md transition duration-200"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl py-2 shadow-md transition duration-200"
               disabled={loading}
             >
               {loading ? (
@@ -160,13 +160,13 @@ const LoginPage = () => {
         </div>
 
         {/* Image Section */}
-        <div className="hidden  md:flex w-full rounded-3xl">
-          <img
-            src={loginImage}
-            alt="Login Illustration"
-            className="object-cover h-full rounded-3xl"
-          />
-        </div>
+      </div>
+      <div className="hidden md:flex w-1/2 rounded-3xl">
+        <img
+          src={loginImage}
+          alt="Login Illustration"
+          className="object-cover h-full rounded-3xl"
+        />
       </div>
     </Container>
   );
