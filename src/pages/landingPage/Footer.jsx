@@ -19,10 +19,10 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About GreenBin */}
           <div>
-            <h5 className="font-bold text-xl mb-4 ml-18 flex items-center">
-              <FaInfoCircle className="mr-2" /> GreenBin
+            <h5 className="font-bold text-xl mb-4 ml-5  flex items-center">
+              GreenBin
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ml-5">
               <li>
                 <a href="#" className="hover:text-green-300">
                   About Us
@@ -48,10 +48,10 @@ const Footer = () => {
 
           {/* Sustainability & Impact */}
           <div>
-            <h5 className="font-bold text-xl mb-4 ml-8 flex items-center">
-              <FaLeaf className="mr-2" /> Sustainability
+            <h5 className="font-bold text-xl mb-4  ml-5 flex items-center">
+              Sustainability
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ml-5 ">
               <li>
                 <a href="#" className="hover:text-green-300">
                   Eco Rewards
@@ -77,10 +77,10 @@ const Footer = () => {
 
           {/* Community & Engagement */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex ml-16 items-center">
-              <FaUsers className="mr-2" /> Community
+            <h5 className="font-bold text-xl mb-4 ml-5 flex  items-center">
+              Community
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ml-5">
               <li>
                 <a href="#" className="hover:text-green-300">
                   Green Ambassadors
@@ -106,10 +106,10 @@ const Footer = () => {
 
           {/* Support & Help */}
           <div>
-            <h5 className="font-bold text-xl mb-4 flex ml-15 items-center">
-              <FaQuestionCircle className="mr-2" /> Support
+            <h5 className="font-bold text-xl ml-5 mb-4 flex  items-center">
+              Support
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ml-5">
               <li>
                 <a href="#" className="hover:text-green-300">
                   FAQs

@@ -28,7 +28,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-10">
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={logo} alt="GreenBin Logo" className="w-8 h-8" />
+          <img src={logo} alt="GreenBin Logo" className="w-18 h-18" />
           <span className="text-2xl font-extrabold text-green-600 tracking-tight whitespace-nowrap">
             GreenBin
           </span>
