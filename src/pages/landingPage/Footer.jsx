@@ -107,9 +107,11 @@ const Footer = () => {
           {/* Support & Help */}
           <div>
             <h5 className="font-bold text-xl ml-5 mb-4 flex  items-center">
-              Support
-            </h5>
+              {" "}
+              Support{" "}
+            </h5>{" "}
             <ul className="space-y-2 ml-5">
+              {" "}
               <li>
                 <a href="#" className="hover:text-green-300">
                   FAQs
