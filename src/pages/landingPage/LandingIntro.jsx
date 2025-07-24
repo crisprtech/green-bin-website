@@ -36,11 +36,7 @@ const Introduction = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            GreenBin Research is a sectoral registry empowering startups,
-            businesses, and climate enthusiasts to trade in carbon credits using
-            our digital currency, engage in gamified sustainability, participate
-            in a climate-focused DAO, and explore global ideas through the Idea
-            Safari fellowship.
+            “GreenBin operates as a digital climate intelligence platform providing decentralized MRV services and verified grassroots data to support Kenya’s carbon registry ecosystem. We collaborate with counties, ministries, and registries to streamline project validation, improve community-level climate action visibility, and ensure climate finance accountability.”
           </motion.p>
 
           <motion.ul

@@ -39,7 +39,7 @@ const Header = () => {
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <Menu className="w-9 h-9 text-gray-800  mr-10" />
+          <Menu className="w-9 h-9 text-gray-800 " />
         </button>
 
         {/* Navigation */}
@@ -55,11 +55,7 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-                GreenBin Carbon Registry System
-              </DropdownItem>
-              <DropdownItem
-                to="/GreenCarbonPoints/OtherServices/DashBoard"
-                icon={Globe}
+                GreenBin Carbon Registry System </DropdownItem> <DropdownItem to="/GreenCarbonPoints/OtherServices/DashBoard" icon={Globe}
               >
                 Explore Carbon Markets
               </DropdownItem>
