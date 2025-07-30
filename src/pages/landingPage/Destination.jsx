@@ -5,7 +5,7 @@ import office from "../../assets/startups.jpg";
 
 const DifferentDestinations = () => {
   return (
-    <div className="my-12 max-w-6xl mx-auto px-4">
+    <div className="my-12">
       <h2 className="text-center text-3xl font-bold mb-4">
         Green Impact Areas
       </h2>

@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-xs z-[50] font-sans">
+    <nav className="fixed top-0 w-full bg-white z-[50] font-sans">
       <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-10">
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center space-x-2">
@@ -55,7 +55,11 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-                GreenBin Carbon Registry System </DropdownItem> <DropdownItem to="/GreenCarbonPoints/OtherServices/DashBoard" icon={Globe}
+                GreenBin Carbon Registry System{" "}
+              </DropdownItem>{" "}
+              <DropdownItem
+                to="/GreenCarbonPoints/OtherServices/DashBoard"
+                icon={Globe}
               >
                 Explore Carbon Markets
               </DropdownItem>
@@ -68,7 +72,6 @@ const Header = () => {
               >
                 Carbon Security Exchange
               </DropdownItem>
-
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
                 Get Access to GreenBin Assets and Bonds
               </DropdownItem>

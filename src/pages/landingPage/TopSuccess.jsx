@@ -4,7 +4,7 @@ import business from "../../assets/business.jpg";
 
 const HowWeMakeAnImpact = () => {
   return (
-    <div className="my-12 max-w-6xl mx-auto px-4">
+    <div className="my-12">
       <h1 className="text-center text-4xl font-bold mb-6">
         How GreenBin Foundation Makes an Impact
       </h1>

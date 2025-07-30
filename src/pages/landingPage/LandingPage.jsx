@@ -1,4 +1,3 @@
-
 import AboutUs from "./AboutUs";
 import Introduction from "./LandingIntro";
 import DifferentDestinations from "./Destination";
@@ -10,7 +9,7 @@ import { motion } from "framer-motion";
 const LandingPage = () => {
   return (
     <motion.div
-      className="smart-ai-bins min-h-screen max-w-screen-xl mx-auto overflow-x-hidden px-4 sm:px-6 md:px-10 py-5"
+      className="mt-10 pb-10 px-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -20,7 +19,7 @@ const LandingPage = () => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="mb-8"
+        className="mb-2"
       >
         <Introduction />
       </motion.div>
@@ -30,7 +29,7 @@ const LandingPage = () => {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="mb-8"
+        className="mb-3"
       >
         <DifferentDestinations />
       </motion.div>
@@ -40,7 +39,7 @@ const LandingPage = () => {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="mb-8"
+        className="mb-3"
       >
         <HowWeMakeAnImpact />
       </motion.div>
@@ -50,7 +49,7 @@ const LandingPage = () => {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.8 }}
-        className="mb-8"
+        className="mb-3"
       >
         <AboutUs />
       </motion.div>
@@ -60,7 +59,7 @@ const LandingPage = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="mb-8"
+        className="mb-3"
       >
         <ForeignPartners />
       </motion.div>
@@ -78,4 +77,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-

@@ -42,7 +42,7 @@ const ForeignPartners = () => {
   ];
 
   return (
-    <div className="my-10 max-w-6xl mx-auto px-4">
+    <div className="my-10 mx-10 ">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Our Foreign Partners
       </h2>

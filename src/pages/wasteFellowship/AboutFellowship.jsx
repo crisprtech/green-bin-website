@@ -10,13 +10,13 @@ import {
 const AboutFellowship = () => {
   return (
     <motion.div
-      className="about-fellowship bg-white text-black min-h-screen p-8"
+      className="about-fellowship bg-white text-black min-h-screen p-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className=" rounded-xl p-6 bg-gray-100 "
+        className="p-6 "
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ const AboutFellowship = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-lg rounded-xl p-6 bg-gray-200 "
+        className="p-6 "
         initial={{ x: -30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
@@ -34,7 +34,6 @@ const AboutFellowship = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-lg rounded-xl p-6 bg-gray-100"
         initial={{ x: 30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
@@ -43,7 +42,7 @@ const AboutFellowship = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-lg rounded-xl p-6 "
+        className="p-6 "
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}

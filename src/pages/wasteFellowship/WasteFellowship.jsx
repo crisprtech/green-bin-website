@@ -87,7 +87,7 @@ const FellowshipIntro = () => (
         <motion.img
           src={fellowshipIntro.image}
           alt="Fellowship"
-          className="w-full md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0"
+          className="w-full md:w-1/2 rounded-lg  mb-6 md:mb-0"
         />
         <div className="md:w-1/2 md:pl-6">
           <p className="text-lg text-gray-700 mb-4">
@@ -95,7 +95,7 @@ const FellowshipIntro = () => (
           </p>
           <a
             href="#"
-            className="inline-block bg-green-600 text-white font-semibold rounded-lg px-6 py-3 hover:bg-green-700 transition duration-300"
+            className="inline-block bg-green-600 text-white font-semibold  px-6 py-3 hover:bg-green-700 transition duration-300"
           >
             Join Now
           </a>

@@ -14,7 +14,7 @@ const GreenCarbonPoints = () => {
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="shadow-sm rounded-xl p-4"
+        className="rounded-xl p-4"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -23,7 +23,7 @@ const GreenCarbonPoints = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-sm rounded-xl p-4 "
+        className=" rounded-xl p-4 "
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.7 }}
@@ -32,7 +32,7 @@ const GreenCarbonPoints = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-sm rounded-xl p-4 "
+        className="rounded-xl p-4 "
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.7 }}
@@ -41,7 +41,7 @@ const GreenCarbonPoints = () => {
       </motion.div>
 
       <motion.div
-        className="mt-6 shadow-sm rounded-xl p-4 "
+        className="rounded-xl p-4 "
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.7 }}

@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  FaInfoCircle,
-  FaLeaf,
-  FaUsers,
-  FaQuestionCircle,
-  FaHandsHelping,
-} from "react-icons/fa"; // Import relevant icons
 
 const Footer = () => {
   return (
