@@ -10,7 +10,7 @@ import carbonImg from "../../assets/business.jpg"; // Replace with your own imag
 
 const Dashboard = () => {
   return (
-    <div className="bg-white pt-20 pb-16 px-4 md:px-8 lg:px-16 max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+    <div className="bg-white pt-20 pb-16 px-4 md:px-8 lg:px-16 flex flex-col-reverse md:flex-row items-center gap-10">
       {/* Left Section */}
       <div className="md:w-1/2 space-y-6">
         <motion.h1

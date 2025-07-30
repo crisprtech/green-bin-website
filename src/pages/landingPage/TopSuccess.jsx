@@ -4,10 +4,7 @@ import business from "../../assets/business.jpg";
 
 const HowWeMakeAnImpact = () => {
   return (
-    <div className="my-12">
-      <h1 className="text-center text-4xl font-bold mb-6">
-        How GreenBin Foundation Makes an Impact
-      </h1>
+    <div className="my-12 ">
       <p className="text-center text-lg text-gray-700 mb-8">
         Together, we can transform waste into opportunity. Through sustainable
         waste management, eco-friendly commerce, and innovative recycling

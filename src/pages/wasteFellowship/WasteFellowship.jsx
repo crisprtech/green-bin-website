@@ -75,7 +75,7 @@ const Screen = ({ title, content }) => (
     <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
       {title}
     </h2>
-    <div className="max-w-6xl mx-auto">{content}</div>
+    <div className="py-6">{content}</div>
   </motion.div>
 );
 

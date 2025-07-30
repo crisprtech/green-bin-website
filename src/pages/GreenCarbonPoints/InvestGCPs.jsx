@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 const RedeemGCP = () => {
@@ -32,7 +31,7 @@ const RedeemGCP = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4">
+    <div className="py-12 px-4">
       <h2 className="text-3xl font-bold text-green-700 mb-6">
         Apply to Register Your Carbon Project
       </h2>
@@ -168,4 +167,3 @@ const RedeemGCP = () => {
 };
 
 export default RedeemGCP;
-

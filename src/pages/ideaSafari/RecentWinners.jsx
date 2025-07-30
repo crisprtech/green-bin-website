@@ -1,4 +1,3 @@
-
 const RecentAmbassadors = () => {
   const ambassadors = [
     {
@@ -39,7 +38,7 @@ const RecentAmbassadors = () => {
   ];
 
   return (
-    <div className="my-10 max-w-6xl mx-auto px-4">
+    <div className="my-10 px-4">
       <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
         Recent Idea Safari Ambassadors
       </h2>
@@ -50,12 +49,18 @@ const RecentAmbassadors = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           >
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-primary">{ambassador.name}</h3>
-              <h4 className="text-lg text-gray-500 mb-2">{ambassador.project}</h4>
+              <h3 className="text-xl font-semibold text-primary">
+                {ambassador.name}
+              </h3>
+              <h4 className="text-lg text-gray-500 mb-2">
+                {ambassador.project}
+              </h4>
               <p className="text-gray-700">
                 <strong>Country Visited:</strong> {ambassador.country}
               </p>
-              <p className="mt-4 text-gray-600 italic">"{ambassador.testimonial}"</p>
+              <p className="mt-4 text-gray-600 italic">
+                "{ambassador.testimonial}"
+              </p>
             </div>
           </div>
         ))}
@@ -65,4 +70,3 @@ const RecentAmbassadors = () => {
 };
 
 export default RecentAmbassadors;
-
