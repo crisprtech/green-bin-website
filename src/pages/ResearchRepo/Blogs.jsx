@@ -1,6 +1,18 @@
+const DropdownItem = ({ to, children, icon: Icon }) => {
+  return (
+    <Link
+      to={to}
+      className="flex items-center px-4 py-2 text-gray-700 hover:bg-white-50 hover:text-green-700 transition-colors duration-150 space-x-2"
+    >
+      {Icon && <Icon className="w-4 h-4 text-green-500" />}
+      <span>{children}</span>
+    </Link>
+  );
+};
+
 import React from "react";
 import { motion } from "framer-motion";
-
+import logo from "../../assets/partners.png";
 const categories = [
   {
     name: "Engineering",
@@ -221,13 +233,13 @@ const BlogScreen = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-80">
+      <div className="relative w-full h-90">
         <img
-          src="/blog-hero.jpg"
+          src={logo}
           alt="GreenBin Blog Hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/70 to-transparent py-10 px-6 md:px-12">
+        <div className="absolute bottom-0 items-center  w-full bg-gradient-to-t from-white via-white/70 to-transparent py-10 px-6 md:px-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-2">
             GreenBin Knowledge Hub
           </h1>
@@ -239,7 +251,7 @@ const BlogScreen = () => {
       </div>
 
       {/* Blog Categories */}
-      <div className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="py-16 px-6 md:px-12 ">
         {categories.map((cat, index) => (
           <div key={index} className="mb-14">
             <h2 className="text-2xl md:text-3xl font-bold text-green-700 mb-4">

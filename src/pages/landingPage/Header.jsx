@@ -12,7 +12,7 @@ import {
   Lightbulb,
   Menu,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 import logo from "../../assets/logo.png";
 
 const Header = () => {
@@ -55,7 +55,7 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-                GreenBin Carbon Registry System{" "}
+                GreenBin Registry System{" "}
               </DropdownItem>{" "}
               <DropdownItem
                 to="/GreenCarbonPoints/OtherServices/DashBoard"
@@ -147,13 +147,13 @@ const Header = () => {
                 Our Team and Partners
               </DropdownItem>
 
-              <DropdownItem to="/landingPage/ContactUs" icon={BadgeCheck}>
+              <DropdownItem to="/ContactUs" icon={BadgeCheck}>
                 Visit or Contact Us
               </DropdownItem>
               <DropdownItem to="/Services" icon={Users}>
                 Our Services
               </DropdownItem>
-              <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
+              <DropdownItem to="/Donate" icon={FileText}>
                 Donate
               </DropdownItem>
             </Dropdown>
@@ -206,9 +206,15 @@ const Dropdown = ({ title, children, isOpen, onToggle }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="absolute left-0 mt-2 min-w-[14rem] bg-white rounded-xl shadow-xs z-50 whitespace-nowrap">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }} // Initial state
+          animate={{ opacity: 1, scale: 1 }} // Animate to this state
+          exit={{ opacity: 0, scale: 0.8 }} // Exit animation
+          transition={{ duration: 0.4 }} // Duration of the animation
+          className="absolute left-0 mt-2 min-w-[14rem] bg-white rounded-xl shadow-xs z-50 whitespace-nowrap"
+        >
           {children}
-        </div>
+        </motion.div>
       )}
     </div>
   );
@@ -216,14 +222,18 @@ const Dropdown = ({ title, children, isOpen, onToggle }) => {
 
 const DropdownItem = ({ to, children, icon: Icon }) => {
   return (
-    <Link
-      to={to}
-      className="flex items-center px-4 py-2 text-gray-700 hover:bg-white-50 hover:text-green-700 transition-colors duration-150 space-x-2"
+    <motion.div
+      whileHover={{ scale: 1.05, y: -3 }} // Bounce effect on hover
+      transition={{ type: "spring", stiffness: 250, damping: 60 }} // Spring effect for bounce
     >
-      {Icon && <Icon className="w-4 h-4 text-green-500" />}
-      <span>{children}</span>
-    </Link>
+      <Link
+        to={to}
+        className="flex items-center px-4 py-2 text-gray-700 hover:bg-white-50 hover:text-green-700 transition-colors duration-150 space-x-2"
+      >
+        {Icon && <Icon className="w-4 h-4 text-green-500" />}
+        <span>{children}</span>
+      </Link>
+    </motion.div>
   );
 };
-
 export default Header;
