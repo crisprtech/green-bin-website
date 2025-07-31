@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import framer-motion for animations
 // Import CEO images
 import ceoLars from "../../assets/peterson.jpeg"; // Replace with actual path
 import ceoSophia from "../../assets/sophia.jpeg"; // Replace with actual path
@@ -42,15 +43,18 @@ const ForeignPartners = () => {
   ];
 
   return (
-    <div className="my-10 mx-10 ">
+    <div className="my-10 mx-10">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Our Foreign Partners
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {partners.map((partner, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-white shadow-md rounded-3xl overflow-hidden transition-transform transform hover:scale-105"
+            initial={{ opacity: 0, y: 20 }} // Initial state for card animation
+            animate={{ opacity: 1, y: 0 }} // Final state for card animation
+            transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for staggered effect
           >
             <div className="relative">
               <img
@@ -58,9 +62,20 @@ const ForeignPartners = () => {
                 alt={partner.ceo}
                 className="w-full h-48 object-cover rounded-3xl"
               />
-              <button className="absolute top-5 left-4 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded">
+              <motion.button
+                className="absolute top-5 left-4 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded"
+                animate={{
+                  y: [0, -10, 0], // Bouncing effect
+                }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+              >
                 {partner.country}
-              </button>
+              </motion.button>
             </div>
             <div className="p-3">
               <h3 className="text-lg font-semibold text-green-600">
@@ -74,7 +89,7 @@ const ForeignPartners = () => {
                 "{partner.testimonial}"
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

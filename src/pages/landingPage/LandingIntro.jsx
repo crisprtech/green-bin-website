@@ -8,6 +8,7 @@ import {
   FaGlobeAfrica,
   FaHandshake,
 } from "react-icons/fa";
+import background from "../../assets/partners.png"; // Import the image
 
 const Introduction = () => {
   const [email, setEmail] = useState("");
@@ -18,8 +19,12 @@ const Introduction = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-green-100 to-white py-16 px-4 md:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    <div
+      className="relative overflow-hidden py-16 px-4 md:px-20 bg-cover bg-center"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
+      <div className="relative max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 z-10">
         {/* Left Main Section */}
         <div className="w-full md:w-2/3">
           <motion.h1
@@ -36,7 +41,12 @@ const Introduction = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            “GreenBin operates as a digital climate intelligence platform providing decentralized MRV services and verified grassroots data to support Kenya’s carbon registry ecosystem. We collaborate with counties, ministries, and registries to streamline project validation, improve community-level climate action visibility, and ensure climate finance accountability.”
+            “GreenBin operates as a digital climate intelligence platform
+            providing decentralized MRV services and verified grassroots data to
+            support Kenya’s carbon registry ecosystem. We collaborate with
+            counties, ministries, and registries to streamline project
+            validation, improve community-level climate action visibility, and
+            ensure climate finance accountability.”
           </motion.p>
 
           <motion.ul
@@ -51,7 +61,13 @@ const Introduction = () => {
             <li>Co-govern climate tech through the GreenBin DAO</li>
           </motion.ul>
 
-          <div className="flex flex-col sm:flex-row mb-4">
+          {/* Waitlist Section with Animation */}
+          <motion.div
+            className="flex flex-col sm:flex-row mb-4"
+            initial={{ opacity: 0, y: 20 }} // Initial state
+            animate={{ opacity: 1, y: 0 }} // Final state
+            transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
+          >
             <input
               type="email"
               placeholder="Email address"
@@ -65,7 +81,7 @@ const Introduction = () => {
             >
               Join Waitlist
             </button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Icon Section */}

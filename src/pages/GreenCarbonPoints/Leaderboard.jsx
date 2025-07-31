@@ -27,7 +27,7 @@ const LeaderBoard = () => {
       </div>
 
       {/* Assets Section */}
-      <div className="max-w-6xl mx-auto mb-20">
+      <div className=" mb-20">
         <h2 className="text-2xl font-bold text-green-700 mb-6">
           🪙 Digital Assets
         </h2>
@@ -76,7 +76,7 @@ const LeaderBoard = () => {
       </div>
 
       {/* Green Bonds Section */}
-      <div className="max-w-6xl mx-auto">
+      <div className="mb-20">
         <h2 className="text-2xl font-bold text-green-700 mb-6">
           💚 Green Bonds
         </h2>

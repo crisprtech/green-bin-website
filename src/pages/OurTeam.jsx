@@ -3,7 +3,7 @@ import ceoLars from "../assets/peterson.jpeg"; // Replace with actual path
 import ceoSophia from "../assets/sophia.jpeg"; // Replace with actual path
 import ceoMohammed from "../assets/mohammed.jpeg"; // Replace with actual path
 import watson from "../assets/watson.jpeg"; // Replace with actual path
-
+import {motion } from "framer-motion"
 const OurTeam = () => {
   const teamMembers = [
     {
@@ -49,7 +49,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="my-10 ">
+    <div className="my-10 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Meet Our Team
       </h2>
@@ -62,8 +62,11 @@ const OurTeam = () => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {teamMembers.map((member, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 20 }} // Start off-screen and transparent
+            animate={{ opacity: 1, y: 0 }} // Animate to visible
+            transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered delay
             className="bg-white shadow-lg rounded-3xl overflow-hidden transition-transform transform hover:scale-105"
           >
             <div className="relative">
@@ -72,9 +75,18 @@ const OurTeam = () => {
                 alt={member.name}
                 className="w-full h-58 rounded-3xl object-cover"
               />
-              <button className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded">
+              <motion.button
+                className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded"
+                animate={{ y: ["0%", "-10%", "0%"] }} // Bouncing effect
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+              >
                 {member.country}
-              </button>
+              </motion.button>
             </div>
             <div className="p-6">
               <h3 className="text-lg font-semibold text-green-600">
@@ -85,11 +97,9 @@ const OurTeam = () => {
                 "{member.testimonial}"
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
   );
-};
-
-export default OurTeam;
+};export default OurTeam;
