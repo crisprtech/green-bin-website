@@ -1,11 +1,9 @@
-
 import React from "react";
 import { motion } from "framer-motion"; // Adding animations
 
 const HeroScreen = () => {
   return (
-    <div className="relative flex items-center justify-center text-center text-white  h-screen">
-      <div className="absolute inset-0 bg-black opacity-60"></div> {/* Dark overlay for better contrast */}
+    <div className="relative mt-20 justify-center text-center text-white  h-screen">
       <div className="relative z-10 p-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -48,7 +46,7 @@ const HeroScreen = () => {
       </div>
 
       {/* Additional Section for Quick Info */}
-      <div className="mt-5 flex justify-around w-full max-w-4xl">
+      <div className="mt-5 flex items-center justify-around w-full max-w-4xl">
         <div className="text-center p-4 bg-green-600 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold">10,000+</h2>
           <p>Active Learners</p>
@@ -67,4 +65,3 @@ const HeroScreen = () => {
 };
 
 export default HeroScreen;
-

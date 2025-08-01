@@ -3,7 +3,8 @@ import ceoLars from "../assets/peterson.jpeg"; // Replace with actual path
 import ceoSophia from "../assets/sophia.jpeg"; // Replace with actual path
 import ceoMohammed from "../assets/mohammed.jpeg"; // Replace with actual path
 import watson from "../assets/watson.jpeg"; // Replace with actual path
-import {motion } from "framer-motion"
+import { motion } from "framer-motion";
+import JoinOurTeam from "./JoinTeam";
 const OurTeam = () => {
   const teamMembers = [
     {
@@ -49,9 +50,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="my-10 px-4 mt-30 sm:px-6 lg:px-8">
-
-      
+    <div className="my-10 max-w-7xl mx-auto px-4 mt-30 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Meet Our Team
       </h2>
@@ -104,4 +103,5 @@ const OurTeam = () => {
       </div>
     </div>
   );
-};export default OurTeam;
+};
+export default OurTeam;

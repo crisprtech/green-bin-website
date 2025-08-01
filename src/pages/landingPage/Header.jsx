@@ -29,9 +29,6 @@ const Header = () => {
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} alt="GreenBin Logo" className="w-18 h-18" />
-          <span className="text-2xl font-extrabold text-green-600 tracking-tight whitespace-nowrap">
-            GreenBin
-          </span>
         </Link>
 
         {/* Mobile menu toggle */}
