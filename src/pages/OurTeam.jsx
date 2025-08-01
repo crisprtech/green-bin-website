@@ -49,7 +49,9 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="my-10 px-4 sm:px-6 lg:px-8">
+    <div className="my-10 px-4 mt-30 sm:px-6 lg:px-8">
+
+      
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Meet Our Team
       </h2>
@@ -60,7 +62,7 @@ const OurTeam = () => {
         innovate and implement strategies that empower communities and protect
         our planet.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-8xl gap-6">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}

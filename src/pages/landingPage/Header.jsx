@@ -72,7 +72,7 @@ const Header = () => {
               >
                 Carbon Security Exchange
               </DropdownItem>
-              <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
+              <DropdownItem to="/GreenCarbonPoints/Leaderboard" icon={FileText}>
                 Get Access to GreenBin Assets and Bonds
               </DropdownItem>
             </Dropdown>
@@ -207,11 +207,11 @@ const Dropdown = ({ title, children, isOpen, onToggle }) => {
       </button>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }} // Initial state
-          animate={{ opacity: 1, scale: 1 }} // Animate to this state
-          exit={{ opacity: 0, scale: 0.8 }} // Exit animation
-          transition={{ duration: 0.4 }} // Duration of the animation
-          className="absolute left-0 mt-2 min-w-[14rem] bg-white rounded-xl shadow-xs z-50 whitespace-nowrap"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="absolute border-green-600 border-l-4 left-0 mt-2 min-w-[14rem] bg-white rounded-xl shadow-xs z-50 whitespace-nowrap"
         >
           {children}
         </motion.div>
@@ -225,6 +225,9 @@ const DropdownItem = ({ to, children, icon: Icon }) => {
     <motion.div
       whileHover={{ scale: 1.05, y: -3 }} // Bounce effect on hover
       transition={{ type: "spring", stiffness: 250, damping: 60 }} // Spring effect for bounce
+      initial={{ opacity: 0, y: 10 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, y: 0 }}
     >
       <Link
         to={to}

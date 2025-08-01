@@ -79,9 +79,9 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12">
+    <div className="min-h-screen pt-24 pb-12">
       {/* Hero Section */}
-      <div className="text-center px-6 py-12 bg-gradient-to-b from-green-100 via-white to-white">
+      <div className="text-center px-6 py-12">
         <h1 className="text-5xl font-extrabold text-green-700">
           Our Services at GreenBin
         </h1>
@@ -93,7 +93,7 @@ const OurServices = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className=" px-6 py-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, idx) => (
           <motion.div
             key={idx}

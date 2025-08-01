@@ -20,9 +20,9 @@ const AboutUs = () => {
       {/* About Section */}
       <div className="flex flex-col md:flex-row items-center mb-10">
         <div className="md:w-1/2">
-          <h1 className="text-3xl font-bold mb-4">About GreenBin Foundation</h1>
+          <h1 className="text-3xl font-bold mb-4">About GreenBin Research Organization</h1>
           <p className="mb-4">
-            GreenBin Foundation is a pioneering force in sustainable innovation,
+            GreenBin Research Organization is a pioneering force in sustainable innovation,
             dedicated to transforming waste into wealth and fostering
             eco-friendly commerce. Through cutting-edge technology, strategic
             partnerships, and community-driven initiatives, we empower
@@ -46,7 +46,7 @@ const AboutUs = () => {
           <img
             src={about}
             alt="GreenBin Foundation"
-            className="w-full h-auto rounded-2xl shadow-lg"
+            className="w-full h-80 rounded-2xl shadow-lg"
           />
         </div>
       </div>

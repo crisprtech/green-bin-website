@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Intro Section */}
       {/* Footer Section */}
       <footer className="bg-green-700 text-white py-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className=" grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About GreenBin */}
           <div>
             <h5 className="font-bold text-xl mb-4 ml-5  flex items-center">

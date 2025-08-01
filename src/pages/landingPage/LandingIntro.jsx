@@ -20,15 +20,15 @@ const Introduction = () => {
 
   return (
     <div
-      className="relative overflow-hidden py-16 px-4 md:px-20 bg-cover bg-center"
-      style={{ backgroundImage: `url(${background})` }}
+      className="relative overflow-hidden py-16 px-4 md:px-20 bg-cover  items-end bg-center"
+      style={{ backgroundImage: `linear-gradient(to top, rgba(255, 255, 250, 1.6), rgba(255, 255, 255, 0)), url(${background})`}}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
       <div className="relative max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 z-10">
         {/* Left Main Section */}
         <div className="w-full md:w-2/3">
           <motion.h1
-            className="mb-4 text-4xl md:text-5xl font-extrabold text-gray-800"
+            className="mb-4 text-2xl md:text-5xl font-extrabold text-gray-800"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}

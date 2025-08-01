@@ -60,9 +60,20 @@ const Dashboard = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
+          <motion.button
+            animate={{
+              y: [0, -20, 0], // Bouncing effect
+            }}
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+            className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+          >
             Get Registered Now
-          </button>
+          </motion.button>
         </motion.div>
       </div>
 
@@ -76,7 +87,7 @@ const Dashboard = () => {
         <img
           src={carbonImg}
           alt="GreenBin Carbon Registration"
-          className="rounded-xl shadow-lg object-cover w-full h-auto max-h-[400px]"
+          className="rounded-4xl  object-cover w-full h-auto max-h-[400px]"
         />
       </motion.div>
     </div>

@@ -44,9 +44,9 @@ const paymentMethods = [
 
 const DonatePage = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen mt-10">
       {/* Hero Section */}
-      <div className="relative bg-green-50 pt-24 pb-12 px-6 text-center">
+      <div className="relative  pt-24 pb-12 px-6 text-center">
         <motion.h1
           className="text-5xl font-extrabold text-green-700"
           initial={{ opacity: 0, y: -30 }}

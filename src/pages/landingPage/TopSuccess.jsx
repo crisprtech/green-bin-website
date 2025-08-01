@@ -24,11 +24,11 @@ const HowWeMakeAnImpact = () => {
 
       <div className="flex flex-col md:flex-row mb-8">
         {/* Image on the top for smaller screens */}
-        <div className="w-full md:w-1/2 mb-4 md:mb-0 flex justify-center">
+        <div className="w-full md:w-1/2 mb-4 md:mb-0 mr-10 flex justify-center">
           <img
             src={business}
             alt="GreenBin Programs"
-            className="rounded-lg shadow-lg"
+            className="rounded-4xl shadow-xs"
           />
         </div>
 

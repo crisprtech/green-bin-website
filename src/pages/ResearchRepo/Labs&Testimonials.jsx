@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -51,10 +50,16 @@ const testimonials = [
 
 // Screen Component
 const Screen = ({ title, content }) => (
-  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-    <div className="py-10 bg-gray-50">
-      <h2 className="text-center text-3xl font-bold text-green-600 mb-6">{title}</h2>
-      <div className="max-w-6xl mx-auto">{content}</div>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    <div className="py-10 bg-white">
+      <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
+        {title}
+      </h2>
+      <div className="p-10">{content}</div>
     </div>
   </motion.div>
 );
@@ -66,7 +71,10 @@ const ResearchLabsScreen = () => (
     content={
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {researchLabs.map((lab, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-5">
+          <div
+            key={index}
+            className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-5"
+          >
             <h3 className="text-xl font-semibold">{lab.name}</h3>
             <h4 className="text-gray-500">{lab.location}</h4>
             <p className="mt-3">
@@ -76,9 +84,9 @@ const ResearchLabsScreen = () => (
             </p>
             <a
               href="#"
-              className="mt-4 block w-full text-center bg-green-600 text-white font-semibold rounded-lg px-4 py-2 hover:bg-green-700 transition duration-300"
+              className="mt-4 block w-full text-center bg-green-600 text-white font-semibold rounded-2xl x-4 py-2 hover:bg-green-700 transition duration-300"
             >
-              View Lab
+              Visit Climate Lab
             </a>
           </div>
         ))}
@@ -94,7 +102,10 @@ const TestimonialsScreen = () => (
     content={
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((leader, index) => (
-          <div key={index} className="bg-white text-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-5">
+          <div
+            key={index}
+            className="bg-white text-center rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-5"
+          >
             <img
               src={leader.image}
               alt={leader.name}
@@ -119,4 +130,3 @@ const ResearchLabsAndTestimonials = () => (
 );
 
 export default ResearchLabsAndTestimonials;
-
