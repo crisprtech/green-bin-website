@@ -141,8 +141,8 @@ const ContactUs = () => {
 
       {/* Footer Note */}
       <div className="text-center mt-16 pb-20 text-gray-600 text-sm">
-        GreenBin Research Organization © {new Date().getFullYear()} — All
-        rights reserved.
+        GreenBin Global Company © {new Date().getFullYear()} — All rights
+        reserved.
       </div>
     </div>
   );

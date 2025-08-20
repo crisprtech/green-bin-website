@@ -12,7 +12,7 @@ const OurTeam = () => {
       title: "Chief Executive Officer (CEO)",
       country: "Kenya",
       testimonial:
-        "Leading GreenBin Research Organization towards a sustainable future, empowering communities with eco-friendly solutions.",
+        "Leading GreenBin Global Company towards a sustainable future, empowering communities with eco-friendly solutions.",
       image: watson,
     },
     {
@@ -33,7 +33,7 @@ const OurTeam = () => {
     },
     {
       name: "Ms Phiorna Malanga",
-      title:  "Chief Operations Officer",
+      title: "Chief Operations Officer",
       country: "United States",
       testimonial:
         "Advancing scientific research to develop innovative eco-green initiatives.",
@@ -102,8 +102,7 @@ const OurTeam = () => {
         ))}
       </div>
       <div className="mt-10">
-      <JoinOurTeam />
-
+        <JoinOurTeam />
       </div>
     </div>
   );
