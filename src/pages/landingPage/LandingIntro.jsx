@@ -33,7 +33,7 @@ const Introduction = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Join GreenBin Research Organization
+            Join GreenBin Global Company
           </motion.h1>
           <motion.p
             className="mb-6 text-lg md:text-xl text-gray-700"
