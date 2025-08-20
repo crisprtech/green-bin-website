@@ -17,7 +17,7 @@ const OurTeam = () => {
     },
     {
       name: "Mr Derrick Ingosi",
-      title: "Chief Technology Officer (CTO)",
+      title: "Director Green Programs and Research",
       country: "Kenya",
       testimonial:
         "Driving innovative technology for sustainability and carbon footprint reduction.",
@@ -33,7 +33,7 @@ const OurTeam = () => {
     },
     {
       name: "Ms Phiorna Malanga",
-      title: "Director Green Programs and Research",
+      title:  "Chief Operations Officer",
       country: "United States",
       testimonial:
         "Advancing scientific research to develop innovative eco-green initiatives.",
@@ -41,7 +41,7 @@ const OurTeam = () => {
     },
     {
       name: "Mr Eliakim Dennis",
-      title: "Chief Operations Officer",
+      title: "Chief Marketing Officer",
       country: "Kenya",
       testimonial:
         "Overseeing the daily operations of the organization and making sure regulatory moats and taken into action",
@@ -100,6 +100,10 @@ const OurTeam = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="mt-10">
+      <JoinOurTeam />
+
       </div>
     </div>
   );

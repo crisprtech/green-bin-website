@@ -16,11 +16,11 @@ const Footer = () => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-2xl"
-      style={{ backgroundColor: "#f5f5f5" }}
+      className="relative bg-[#1E293B]  overflow-hidden rounded-2xl"
+      style={{ backgroundColor: "#1E293B" }}
     >
       {/* Footer Section */}
-      <footer className="bg-white text-black py-10">
+      <footer className="bg-[#1E293B]  text-white py-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About GreenBin */}
           <div className="footer-element">
@@ -154,7 +154,7 @@ const Footer = () => {
               className="bg-gray-100 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <motion.button
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md"
+              className="bg-[#AEF359] hover:bg-green-600 text-white px-4 py-2 rounded-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

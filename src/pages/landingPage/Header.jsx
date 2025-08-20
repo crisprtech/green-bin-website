@@ -30,7 +30,7 @@ const Header = () => {
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} alt="GreenBin Logo" className="w-18 h-18" />
         </Link>
-
+      <h1>GreenBin Research</h1>
         {/* Mobile menu toggle */}
         <button
           className="md:hidden"

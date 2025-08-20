@@ -13,7 +13,7 @@ const benefits = [
 
 export default function JoinOurTeam() {
   return (
-    <section className="bg-[#0F172A] text-white py-16 px-4 sm:px-8 md:px-16">
+    <section className="bg-white text-white py-16 px-4 sm:px-8 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* IMAGE */}
         <motion.div
@@ -25,7 +25,7 @@ export default function JoinOurTeam() {
           <img
             src={teamImg}
             alt="Join our team"
-            className="rounded-2xl shadow-lg w-full"
+            className="rounded-2xl shadow-xs w-full"
           />
         </motion.div>
 
@@ -35,7 +35,7 @@ export default function JoinOurTeam() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-[#1E293B] rounded-2xl p-8 shadow-xl"
+          className="bg-[#1E293B] rounded-4xl p-8 shadow-xs"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Join our team

@@ -20,6 +20,8 @@ import OurTeam from "./pages/OurTeam";
 import OurServices from "./pages/Services";
 import DonatePage from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
+import JoinOurTeam from "./pages/JoinTeam";
+import PageNotFound from "./pages/PageNotFound";
 function App() {
   return (
     <Router>
@@ -67,6 +69,9 @@ function App() {
         <Route path="/Services" element={<OurServices />} />
         <Route path="/Donate" element={<DonatePage />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/JoinTeam" element={<JoinOurTeam />} />
+        <Route path="/PageNotFound" element={<PageNotFound/>} />
+
       </Routes>
     </Router>
   );

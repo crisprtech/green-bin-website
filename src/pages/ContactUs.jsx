@@ -21,7 +21,7 @@ const ContactUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          Contact GreenBin
+          Contact GreenBin Research
         </motion.h1>
         <motion.p
           className="mt-4 max-w-2xl mx-auto text-gray-700 text-lg"
