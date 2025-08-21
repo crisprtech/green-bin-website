@@ -6,13 +6,13 @@ import office from "../../assets/startups.jpg";
 
 const DifferentDestinations = () => {
   return (
-    <div className="my-12">
+    <div className="my-12  max-w-7xl mx-auto ">
       <h2 className="text-center text-3xl font-bold mb-4">
-        Green Impact Areas
+        Join Green Circular Economy Registry
       </h2>
       <p className="text-center text-lg text-gray-700 mb-8">
-        Discover how GreenBin Foundation is driving sustainable innovations
-        across different sectors to create a greener future.
+        Discover how GreenBin Global is driving sustainable innovations across
+        different sectors to create a greener future.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Eco Scholars */}

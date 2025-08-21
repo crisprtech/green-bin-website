@@ -52,7 +52,7 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
-                GreenBin Registry System{" "}
+                Circular Registry System{" "}
               </DropdownItem>{" "}
               <DropdownItem
                 to="/GreenCarbonPoints/OtherServices/DashBoard"
