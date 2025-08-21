@@ -3,13 +3,13 @@ import { motion } from "framer-motion"; // Adding animations
 
 const HeroScreen = () => {
   return (
-    <div className="relative mt-20 justify-center text-center text-white  h-screen">
+    <div className="relative mt-20 container mx-auto justify-center text-center text-white pb-20 ">
       <div className="relative z-10 p-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-5xl font-bold mb-3"
+          className="text-4xl md:text-5xl text-black font-bold mb-3"
         >
           Learn & Innovate for a Greener Future
         </motion.h1>
@@ -18,7 +18,7 @@ const HeroScreen = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
-          className="text-lg mb-4"
+          className="text-lg mb-4 text-black"
         >
           Access expert-led courses, research materials, and hands-on projects
           to drive sustainability.
@@ -38,7 +38,7 @@ const HeroScreen = () => {
           </a>
           <a
             href="#about"
-            className="border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-lg px-5 py-3 transition duration-300"
+            className="border-2 border-green-800 hover:bg-white hover:text-black text-black font-semibold rounded-lg px-5 py-3 transition duration-300"
           >
             Explore More
           </a>
@@ -46,7 +46,7 @@ const HeroScreen = () => {
       </div>
 
       {/* Additional Section for Quick Info */}
-      <div className="mt-5 flex items-center justify-around w-full max-w-4xl">
+      <div className="mt-5 flex items-center justify-around w-full container mx-auto">
         <div className="text-center p-4 bg-green-600 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold">10,000+</h2>
           <p>Active Learners</p>

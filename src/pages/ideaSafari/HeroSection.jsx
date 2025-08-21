@@ -1,10 +1,9 @@
-
 import React from "react";
 
 const HeroSection = () => {
   return (
     <div
-      className="relative h-[500px] bg-cover bg-center flex flex-col justify-center items-center text-black text-center px-6"
+      className="relative h-[500px] container mx-auto bg-cover bg-center flex flex-col justify-center items-center text-black text-center px-6"
       style={{ backgroundImage: "url(path/to/background-image.jpg)" }}
     >
       <div className="relative z-10 max-w-2xl">
@@ -25,4 +24,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

@@ -231,7 +231,7 @@ const categories = [
 
 const BlogScreen = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white container mx-auto">
       {/* Hero Section */}
       <div className="relative w-full h-90">
         <img

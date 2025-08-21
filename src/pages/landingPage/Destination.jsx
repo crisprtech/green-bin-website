@@ -6,7 +6,7 @@ import office from "../../assets/startups.jpg";
 
 const DifferentDestinations = () => {
   return (
-    <div className="my-12  max-w-6xl mx-auto ">
+    <div className="my-12 container mx-auto ">
       <h2 className="text-center text-3xl font-bold mb-4">
         Join Green Circular Economy Registry
       </h2>

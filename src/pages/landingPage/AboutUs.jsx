@@ -22,7 +22,7 @@ const AboutUs = () => {
             About GreenBin Global Company
           </h1>
           <p className="mb-4">
-            GreenBin Global Company is a pioneering force in sustainable
+            GreenBin Global Company is a pioneering force in climate research and technology, sustainable
             innovation, dedicated to transforming waste into wealth and
             fostering eco-friendly commerce. Through cutting-edge technology,
             strategic partnerships, and community-driven initiatives, we empower

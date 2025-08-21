@@ -5,7 +5,7 @@ import { motion } from "framer-motion"; // Import framer-motion for animations
 
 const HowWeMakeAnImpact = () => {
   return (
-    <div className="my-12">
+    <div className="my-12 container mx-auto ">
       <p className="text-center text-lg text-gray-700 mb-8">
         Together, we can transform waste into opportunity. Through sustainable
         waste management, eco-friendly commerce, and innovative recycling

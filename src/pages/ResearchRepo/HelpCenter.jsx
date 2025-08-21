@@ -96,7 +96,7 @@ const HelpCenter = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="mx-30 py-5">
+      <div className="mx-auto container  py-5">
         <h2 className="text-center mb-4 text-3xl font-bold text-primary">
           Help Center
         </h2>

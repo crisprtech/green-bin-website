@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
 
 const Testimonials = () => {
   const testimonials = [
@@ -31,24 +30,25 @@ const Testimonials = () => {
   ];
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4 text-success">What Our Users Say</h2>
-      <Row className="g-4">
+    <div className="my-20 container mx-auto">
+      <h2 className="text-center mb-8 text-green-600 text-3xl font-bold">
+        What Our Users Say
+      </h2>
+      <div className="flex flex-wrap justify-center gap-6">
         {testimonials.map((testimonial, index) => (
-          <Col key={index} md={6} lg={4}>
-            <Card className="h-100 shadow-sm border-0">
-              <Card.Body>
-                <Card.Title className="fw-bold text-primary">{testimonial.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-secondary">{testimonial.project}</Card.Subtitle>
-                <Card.Text className="fst-italic text-muted">
-                  "{testimonial.feedback}"
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg p-6 w-full md:w-1/2 lg:w-1/3"
+          >
+            <h3 className="font-bold text-blue-600 text-xl">
+              {testimonial.name}
+            </h3>
+            <h4 className="text-gray-500 mb-4">{testimonial.project}</h4>
+            <p className="italic text-gray-700">"{testimonial.feedback}"</p>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 

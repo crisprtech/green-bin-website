@@ -1,5 +1,5 @@
+
 import { useState } from "react";
-import { Form, Button, Container, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import loginImage from "../../assets/startups.jpg"; // Replace with actual path to your image
 
@@ -50,8 +50,8 @@ const LoginPage = () => {
   };
 
   return (
-    <Container className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-lg">
+    <div className="flex items-center justify-center min-h-screen ">
+      <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-3xl overflow-hidden">
         {/* Login Form Section */}
         <div className="p-8 w-full">
           <h2 className="text-center text-2xl font-bold text-green-600 mb-6">
@@ -62,114 +62,94 @@ const LoginPage = () => {
             parties, including innovators, squads, and companies. Join us in
             making a positive impact!
           </p>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-4" controlId="formRole">
-              <Form.Label className="text-gray-700 font-semibold mr-10">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label className="text-gray-700 font-semibold mb-2 block">
                 Offsetter category
-              </Form.Label>
-              <Form.Select
+              </label>
+              <select
                 name="role"
                 value={formData.role}
                 onChange={handleChange}
-                isInvalid={!!errors.role}
-                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
+                className={`border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out w-full ${
+                  errors.role ? "border-red-500" : ""
+                }`}
               >
+                <option value="">Select a role</option>
                 <option value="innovator">Innovator</option>
                 <option value="business_enterprise">Business Enterprise</option>
-                <option value="implementing_partner">
-                  Implementing Partner
-                </option>
-              </Form.Select>
-              <Form.Control.Feedback type="invalid">
-                {errors.role}
-              </Form.Control.Feedback>
-            </Form.Group>
+                <option value="implementing_partner">Implementing Partner</option>
+              </select>
+              {errors.role && <p className="text-red-500 text-sm">{errors.role}</p>}
+            </div>
 
-            <Form.Group className="mb-4" controlId="formEmail">
-              <Form.Label className="text-gray-700 mr-10 font-semibold">
+            <div className="mb-4">
+              <label className="text-gray-700 mb-2 block font-semibold">
                 Email Address
-              </Form.Label>
-              <Form.Control
+              </label>
+              <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                isInvalid={!!errors.email}
-                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
+                className={`border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out w-full ${
+                  errors.email ? "border-red-500" : ""
+                }`}
               />
-              <Form.Control.Feedback type="invalid">
-                {errors.email}
-              </Form.Control.Feedback>
-            </Form.Group>
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            </div>
 
-            <Form.Group className="mb-4" controlId="formPassword">
-              <Form.Label className="text-gray-700 font-semibold mr-10">
+            <div className="mb-4">
+              <label className="text-gray-700 mb-2 block font-semibold">
                 Password
-              </Form.Label>
-              <Form.Control
+              </label>
+              <input
                 type="password"
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                isInvalid={!!errors.password}
-                className="border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out"
+                className={`border-gray-300 rounded-md h-10 shadow-sm focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out w-full ${
+                  errors.password ? "border-red-500" : ""
+                }`}
               />
-              <Form.Control.Feedback type="invalid">
-                {errors.password}
-              </Form.Control.Feedback>
-            </Form.Group>
+              {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+            </div>
 
-            <Form.Group className="mb-4" controlId="formAgree">
-              <Form.Check
+            <div className="mb-4 flex items-center">
+              <input
                 type="checkbox"
                 name="agree"
-                label="I agree to the terms and conditions"
                 checked={formData.agree}
                 onChange={handleChange}
-                isInvalid={!!errors.agree}
-                className="text-gray-700 mr-10"
+                className="mr-2"
               />
-              <Form.Control.Feedback type="invalid">
-                {errors.agree}
-              </Form.Control.Feedback>
-            </Form.Group>
+              <label className="text-gray-700 font-semibold">
+                I agree to the terms and conditions
+              </label>
+              {errors.agree && <p className="text-red-500 text-sm">{errors.agree}</p>}
+            </div>
 
-            <Button
-              variant="primary"
+            <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl py-2 shadow-md transition duration-200"
+              className={`w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl py-2 shadow-md transition duration-200 ${
+                loading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
               disabled={loading}
             >
-              {loading ? (
-                <>
-                  <Spinner animation="border" size="sm" /> Processing...
-                </>
-              ) : (
-                "Login"
-              )}
-            </Button>
-          </Form>
+              {loading ? "Processing..." : "Login"}
+            </button>
+          </form>
           <div className="text-center mt-4">
-            <a
-              href="/forgot-password"
-              className="text-green-600 hover:underline"
-            >
+            <a href="/forgot-password" className="text-green-600 hover:underline">
               Forgot Password?
             </a>
           </div>
         </div>
 
-        {/* Image Section */}
       </div>
-      <div className="hidden md:flex w-1/2 rounded-3xl">
-        <img
-          src={loginImage}
-          alt="Login Illustration"
-          className="object-cover h-full rounded-3xl"
-        />
-      </div>
-    </Container>
+    </div>
   );
 };
 
 export default LoginPage;
+

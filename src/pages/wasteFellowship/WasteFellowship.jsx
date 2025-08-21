@@ -70,7 +70,7 @@ const Screen = ({ title, content }) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
-    className="py-10 bg-gray-50"
+    className="py-10  container mx-auto"
   >
     <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
       {title}

@@ -4,6 +4,8 @@ import EducationalPlatform from "./pages/ResearchRepo/Educational";
 import ApplyNow from "./pages/ideaSafari/ApplyNow";
 import IdeaSafari from "./pages/ideaSafari/IdeaSafari";
 import GreenCarbonPoints from "./pages/GreenCarbonPoints/GreenCarbon";
+import GreenBinDAO from "./pages/GreenCarbonPoints/GreenBinDAO";
+import LeaderBoard from "./pages/GreenCarbonPoints/Leaderboard";
 import UploadResearch from "./pages/ResearchRepo/Labs&Testimonials";
 import SmartAIBins from "./pages/greenAIBins/wasteManagement";
 import RegisterPage from "./pages/authentication/RegisterPage";
@@ -38,6 +40,15 @@ function App() {
           element={<ServiceDashBoard />}
         />
         <Route
+          path="/GreenCarbonPoints/GreenBinDAO"
+          element={<GreenBinDAO />}
+        />
+        <Route
+          path="/GreenCarbonPoints/Leaderboard"
+          element={<LeaderBoard />}
+        />
+
+        <Route
           path="/GreenCarbonPoints/GreenCarbon"
           element={<GreenCarbonPoints />}
         />
@@ -70,8 +81,7 @@ function App() {
         <Route path="/Donate" element={<DonatePage />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/JoinTeam" element={<JoinOurTeam />} />
-        <Route path="/PageNotFound" element={<PageNotFound/>} />
-
+        <Route path="/PageNotFound" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

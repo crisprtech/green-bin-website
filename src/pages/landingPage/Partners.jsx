@@ -13,7 +13,7 @@ const ForeignPartners = () => {
       ceo: "Dr. Lars Petersen",
       country: "Denmark",
       testimonial:
-        "Partnering with GreenBin Foundation has been an enriching experience. Together, we are advancing sustainable waste management solutions across Africa.",
+        "Partnering with GreenBin Global has been an enriching experience. Together, we are advancing sustainable waste management solutions across Africa.",
       image: ceoLars,
     },
     {
@@ -43,7 +43,7 @@ const ForeignPartners = () => {
   ];
 
   return (
-    <div className="my-10 mx-10">
+    <div className="container mx-auto">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Our Foreign Partners
       </h2>

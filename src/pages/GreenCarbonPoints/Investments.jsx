@@ -42,7 +42,7 @@ const steps = [
 
 const OnboardingSteps = () => {
   return (
-    <div className="min-h-screen py-12 px-6">
+    <div className="min-h-screen py-12 px-6 container mx-auto">
       {/* Hero */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">

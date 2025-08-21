@@ -55,7 +55,7 @@ const OurTeam = () => {
         Meet Our Team
       </h2>
       <p className="text-lg text-gray-700 mb-10">
-        At GreenBin Foundation, our team is dedicated to creating sustainable
+        At GreenBin Research, our team is dedicated to creating sustainable
         solutions for waste management and environmental conservation.
         Comprising experts from various fields, we work collaboratively to
         innovate and implement strategies that empower communities and protect

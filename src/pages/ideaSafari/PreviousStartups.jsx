@@ -38,7 +38,7 @@ const PreviousStartups = () => {
   ];
 
   return (
-    <div className="p-6 bg-gray-50 rounded-xl shadow-sm">
+    <div className="p-6  container mx-auto ">
       <h2 className="text-3xl font-bold text-center mb-8 text-green-600">
         Previous Idea Safari Startups
       </h2>

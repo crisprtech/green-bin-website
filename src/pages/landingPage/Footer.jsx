@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <div
-      className="relative bg-[#1E293B]  overflow-hidden rounded-2xl"
+      className="relative bg-[#1E293B]  overflow-hidden rounded-sm container mx-auto"
       style={{ backgroundColor: "#1E293B" }}
     >
       {/* Footer Section */}

@@ -2,7 +2,6 @@ import React from "react";
 import Dashboard from "./Dashboard";
 import OnboardingProcess from "./Investments";
 import RedeemGCP from "./InvestGCPs";
-import Leaderboard from "./Leaderboard";
 import { motion } from "framer-motion";
 
 const GreenCarbonPoints = () => {
@@ -40,15 +39,7 @@ const GreenCarbonPoints = () => {
         <RedeemGCP />
       </motion.div>
 
-      <motion.div
-        className="rounded-xl p-4 "
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.7 }}
-      >
-        <Leaderboard />
-      </motion.div>
-    </motion.div>
+          </motion.div>
   );
 };
 

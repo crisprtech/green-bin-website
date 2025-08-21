@@ -38,7 +38,7 @@ const RecentAmbassadors = () => {
   ];
 
   return (
-    <div className="my-10 px-4">
+    <div className="my-10 px-4 container mx-auto">
       <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
         Recent Idea Safari Ambassadors
       </h2>

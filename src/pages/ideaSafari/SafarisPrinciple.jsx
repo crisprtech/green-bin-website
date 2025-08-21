@@ -28,7 +28,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="my-10 px-4">
+    <div className="my-10 px-4 container mx-auto">
       <h2 className="text-center text-3xl font-bold text-green-600 mb-8">
         How Idea Safari Works
       </h2>

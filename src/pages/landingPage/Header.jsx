@@ -47,7 +47,7 @@ const Header = () => {
         >
           <div className="flex flex-col md:flex-row md:items-center w-full md:space-x-4">
             <Dropdown
-              title="Carbon Registry"
+              title="Circular Registry"
               isOpen={activeDropdown === "Carbon Registry"}
               onToggle={() => handleDropdownToggle("Carbon Registry")}
             >
@@ -60,7 +60,7 @@ const Header = () => {
               >
                 Explore Carbon Markets
               </DropdownItem>
-              <DropdownItem to="/GreenCarbonPoints/GreenCarbonDAO" icon={Globe}>
+              <DropdownItem to="/GreenCarbonPoints/GreenBinDAO" icon={Globe}>
                 Participate in GreenBin DAO
               </DropdownItem>
               <DropdownItem

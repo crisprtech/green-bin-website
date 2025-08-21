@@ -38,7 +38,7 @@ const ContactUs = () => {
       {/* Contact Content */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-10">
         {/* Contact Form */}
-        <div className="bg-white shadow-lg rounded-xl p-6 border">
+        <div className="bg-white shadow-lg border-green-700 rounded-3xl p-6 border">
           <h2 className="text-2xl font-semibold text-green-700 mb-4">
             Send Us a Message
           </h2>
