@@ -2,7 +2,7 @@ import React from "react";
 
 const ResearchLabsHero = () => {
   return (
-    <div className="relative flex items-center text-center text-white  h-screen">
+    <div className="relative flex items-center max-w-6xl mx-auto text-center text-white  h-screen">
       <div className="absolute inset-0  opacity-50"></div>{" "}
       {/* Dark overlay for better contrast */}
       <div className="relative z-10 p-6">

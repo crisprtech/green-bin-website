@@ -79,7 +79,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <div className="min-h-screen pt-24 pb-12">
+    <div className="min-h-screen pt-24 max-w-7xl mx-auto  pb-12">
       {/* Hero Section */}
       <div className="text-center px-6 py-12">
         <h1 className="text-5xl font-extrabold text-green-700">
