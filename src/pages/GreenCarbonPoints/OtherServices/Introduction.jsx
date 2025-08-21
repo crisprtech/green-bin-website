@@ -1,5 +1,5 @@
+
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
   FaWifi,
@@ -47,9 +47,9 @@ const services = [
 
 const GCPServicesIntro = () => {
   return (
-    <Container className="text-center py-5">
+    <div className="text-center container mx-auto mt-18 py-10 px-4">
       <motion.h1
-        className="mb-4 fw-bold text-success"
+        className="mb-4 text-3xl font-bold text-green-600"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -58,7 +58,7 @@ const GCPServicesIntro = () => {
       </motion.h1>
 
       <motion.p
-        className="text-muted"
+        className="text-gray-600"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
@@ -67,27 +67,32 @@ const GCPServicesIntro = () => {
         Green Carbon Points to pay for everyday services effortlessly.
       </motion.p>
 
-      <Row className="mt-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service) => (
-          <Col key={service.id} md={4} className="mb-4">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Card className="shadow-lg border-0 p-3">
-                <div className="text-success mb-3">{service.icon}</div>
-                <Card.Title className="fw-bold">{service.name}</Card.Title>
-                <Card.Text className="text-muted">
-                  {service.description}
-                </Card.Text>
-              </Card>
-            </motion.div>
-          </Col>
+          <motion.div
+            key={service.id}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center"
+          >
+            <div className="text-green-600 mb-4">{service.icon}</div>
+            <h3 className="text-lg font-semibold">{service.name}</h3>
+            <p className="text-gray-500">{service.description}</p>
+          </motion.div>
         ))}
-      </Row>
+      </div>
 
-      <Button variant="success" className="mt-4 px-4 py-2 fw-bold" size="lg">
+      <motion.button
+        className="mt-6 bg-green-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-green-700 transition"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
         Start Using GCPs Now
-      </Button>
-    </Container>
+      </motion.button>
+    </div>
   );
 };
 
 export default GCPServicesIntro;
+

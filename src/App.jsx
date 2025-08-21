@@ -24,6 +24,7 @@ import DonatePage from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import JoinOurTeam from "./pages/JoinTeam";
 import PageNotFound from "./pages/PageNotFound";
+import Bootcamps from './pages/GreenDashBoard/Bootcamps'; 
 function App() {
   return (
     <Router>
@@ -44,9 +45,15 @@ function App() {
           element={<GreenBinDAO />}
         />
         <Route
-          path="/GreenCarbonPoints/Leaderboard"
-          element={<LeaderBoard />}
+          path="/GreenDashBoard/Bootcamps"
+          element={<Bootcamps />}
         />
+
+        <Route
+          path="/GreenCarbonPoints/GreenBinDAO"
+          element={<GreenBinDAO />}
+        />
+
 
         <Route
           path="/GreenCarbonPoints/GreenCarbon"

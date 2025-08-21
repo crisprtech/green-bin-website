@@ -104,7 +104,7 @@ const Header = () => {
               <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
                 News,Events and Summits
               </DropdownItem>
-              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+              <DropdownItem to="/GreenDashBoard/Bootcamps" icon={Users}>
                 Workshops and Climate Bootcamps
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
