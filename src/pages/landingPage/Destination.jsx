@@ -26,7 +26,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
@@ -47,7 +47,7 @@ const DifferentDestinations = () => {
             </p>
             <a
               href="#"
-              className="inline-block bg-green-600 text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
+              className="inline-block bg-[#44b027] text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
             >
               Join the Movement
             </a>
@@ -65,7 +65,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
@@ -86,7 +86,7 @@ const DifferentDestinations = () => {
             </p>
             <a
               href="#"
-              className="inline-block bg-green-600 text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
+              className="inline-block bg-[#44b027] text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
             >
               Get Involved
             </a>
@@ -104,7 +104,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-blue-500 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
@@ -115,7 +115,7 @@ const DifferentDestinations = () => {
               ease: "easeInOut",
             }}
           >
-            250 Joined
+            298 Joined
           </motion.button>
           <div className="p-6">
             <h5 className="text-lg font-semibold mb-2">
@@ -127,7 +127,7 @@ const DifferentDestinations = () => {
             </p>
             <a
               href="#"
-              className="inline-block bg-green-600 text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
+              className="inline-block bg-[#44b027] text-white font-semibold py-2 px-4 rounded-2xl hover:bg-green-500 transition"
             >
               Be a Changemaker
             </a>

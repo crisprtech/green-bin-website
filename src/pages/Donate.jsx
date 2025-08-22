@@ -53,7 +53,7 @@ const DonatePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Support GreenBin’s clmate research and technology Mission
+          Support GreenBin’s climate research and technology Mission
         </motion.h1>
         <motion.p
           className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg"

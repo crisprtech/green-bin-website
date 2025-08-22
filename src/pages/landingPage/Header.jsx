@@ -82,7 +82,7 @@ const Header = () => {
                 Access Idea Safari Platform
               </DropdownItem>
               <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
-                Check Eligibility criteria
+                Community Sensitization Fellowship
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
                 Idea Safari Partnerships
@@ -107,7 +107,7 @@ const Header = () => {
                 Workshops and Climate Bootcamps
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
-                Green Games
+                GreenBin Research Academy
               </DropdownItem>
             </Dropdown>
 
@@ -127,7 +127,7 @@ const Header = () => {
               </DropdownItem>
 
               <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
-                Internship and Ambassador Programs
+                GreenBin jobs 
               </DropdownItem>
             </Dropdown>
 
@@ -160,7 +160,7 @@ const Header = () => {
         {/* Desktop Auth Button */}
         <div className="hidden md:flex ml-70 ">
           <Link to="/authentication/LoginPage">
-            <button className="border-2 border-green-500 rounded-xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
+            <button className="border-2 border-[#44b027] rounded-xl text-[#44b027] font-semibold px-4 py-1.5 hover:bg-[#44b027] hover:text-white transition duration-300">
               Get Started
             </button>
           </Link>

@@ -172,7 +172,7 @@ const Footer = () => {
               className="bg-gray-100 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <motion.button
-              className="bg-[#AEF359] hover:bg-green-600 text-white px-4 py-2 rounded-md"
+              className="bg-[#44b027] hover:bg-green-600 text-white px-4 py-2 rounded-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -14,7 +14,7 @@ const Dashboard = () => {
       {/* Left Section */}
       <div className="md:w-1/2 space-y-6">
         <motion.h1
-          className="text-4xl md:text-5xl font-extrabold text-green-700 leading-tight"
+          className="text-4xl md:text-5xl font-extrabold text-[#44b027] leading-tight"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -48,7 +48,7 @@ const Dashboard = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 + index * 0.2 }}
             >
-              <feature.icon className="text-green-600" size={22} />
+              <feature.icon className="text-[#44b027]" size={22} />
               <span className="text-gray-800 font-medium">{feature.title}</span>
             </motion.div>
           ))}
@@ -70,7 +70,7 @@ const Dashboard = () => {
               repeatType: "loop",
               ease: "easeInOut",
             }}
-            className="mt-6 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+            className="mt-6 bg-[#44b027] hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
           >
             Get Registered Now
           </motion.button>

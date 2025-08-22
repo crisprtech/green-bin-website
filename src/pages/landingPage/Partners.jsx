@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
 // Import CEO images
@@ -43,8 +44,8 @@ const ForeignPartners = () => {
   ];
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
+    <div className="container mx-auto mb-10">
+      <h2 className="text-3xl font-bold text-center text-[#44b027] mb-6">
         Our Foreign Partners
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,8 +54,9 @@ const ForeignPartners = () => {
             key={index}
             className="bg-white shadow-md rounded-3xl overflow-hidden transition-transform transform hover:scale-105"
             initial={{ opacity: 0, y: 20 }} // Initial state for card animation
-            animate={{ opacity: 1, y: 0 }} // Final state for card animation
+            whileInView={{ opacity: 1, y: 0 }} // Animate to final state when in view
             transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for staggered effect
+            viewport={{ once: true }} // Only animate once when in view
           >
             <div className="relative">
               <img
@@ -63,7 +65,7 @@ const ForeignPartners = () => {
                 className="w-full h-48 object-cover rounded-3xl"
               />
               <motion.button
-                className="absolute top-5 left-4 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded"
+                className="absolute top-5 left-4 bg-[#44b027] text-white text-xs font-bold py-1 px-2 rounded"
                 animate={{
                   y: [0, -10, 0], // Bouncing effect
                 }}
@@ -78,7 +80,7 @@ const ForeignPartners = () => {
               </motion.button>
             </div>
             <div className="p-3">
-              <h3 className="text-lg font-semibold text-green-600">
+              <h3 className="text-lg font-semibold text-[#44b027]">
                 {partner.company}
               </h3>
               <h4 className="text-sm text-gray-500 mb-2">CEO: {partner.ceo}</h4>
@@ -97,3 +99,4 @@ const ForeignPartners = () => {
 };
 
 export default ForeignPartners;
+

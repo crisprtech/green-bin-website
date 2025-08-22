@@ -9,7 +9,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import background from "../../assets/partners.png"; // Import the image
-
+import ImpactPerformance from './GreenImpact'
 const Introduction = () => {
   const [email, setEmail] = useState("");
 
@@ -20,20 +20,21 @@ const Introduction = () => {
 
   return (
     <div
-      className="relative overflow-hidden py-16 container mx-auto px-4 md:px-20 bg-cover  items-end bg-center"
+      className="relative overflow-hidden  container mx-auto px-4 md:px-10 bg-cover  items-end bg-center"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
       <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 z-10">
         {/* Left Main Section */}
         <div className="w-full md:w-2/3">
-          <motion.h1
-            className="mb-4 text-2xl md:text-5xl font-extrabold text-gray-800"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Join GreenBin Global Company
-          </motion.h1>
+          
+<motion.h1
+  className="mb-4 text-2xl md:text-5xl font-extrabold text-gray-800"
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  Join <span className="text-[#44b027]">Green</span><span className="text-[#1e88e5]">Bin</span> Global Company
+</motion.h1>
           <motion.p
             className="mb-6 text-lg md:text-xl text-gray-700"
             initial={{ opacity: 0 }}
@@ -75,7 +76,7 @@ const Introduction = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <button
-              className="mt-2 sm:mt-0 sm:ml-2 px-6 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
+              className="mt-2 sm:mt-0 sm:ml-2 px-6 py-3 bg-[#44b027] text-white font-bold rounded-lg hover:bg-green-700 transition"
               onClick={handleJoinWaitlist}
             >
               Join Waitlist
@@ -119,13 +120,13 @@ const Introduction = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
             >
-              <item.icon className="text-green-600 mr-4" size={28} />
+              <item.icon className="text-[#44b027] mr-4" size={28} />
               <div>
                 <span className="font-bold text-gray-800 text-lg">
                   {item.text}
                 </span>
                 <br />
-                <span className="text-green-600 font-semibold text-sm">
+                <span className="text-[#44b027] font-semibold text-sm">
                   {item.sub}
                 </span>
               </div>
@@ -133,6 +134,7 @@ const Introduction = () => {
           ))}
         </div>
       </div>
+      <ImpactPerformance />
     </div>
   );
 };

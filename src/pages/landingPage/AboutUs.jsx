@@ -1,23 +1,33 @@
+
 import React from "react";
+import { motion } from "framer-motion";
 import about from "../../assets/about.jpg";
 import collaborationImg from "../../assets/green-technology.png";
-import sustainabilityImg from "../../assets/sustainable-growth.png"; // Replace with actual path
-import innovationImg from "../../assets/innovation.png"; // Replace with actual path
-import empowermentImg from "../../assets/green-power.png"; // Replace with actual path
-import integrityImg from "../../assets/planet-earth.png"; // Replace with actual path
-import circularEconomyImg from "../../assets/circular-economy.png"; // Replace with actual path
+import sustainabilityImg from "../../assets/sustainable-growth.png"; 
+import innovationImg from "../../assets/innovation.png"; 
+import empowermentImg from "../../assets/green-power.png"; 
+import integrityImg from "../../assets/planet-earth.png"; 
+import circularEconomyImg from "../../assets/circular-economy.png"; 
+
 const AboutUs = () => {
   return (
     <div className="container mx-auto my-10 px-4">
       {/* Who We Are Section */}
       <div className="text-center mb-6">
-        <h2 className="text-xl font-semibold text-green-600 uppercase tracking-wide">
+        <h2 className="text-xl font-semibold text-[#44b027] uppercase tracking-wide">
           Who We Are
         </h2>
       </div>
+
       {/* About Section */}
       <div className="flex flex-col md:flex-row items-center mb-10">
-        <div className="md:w-1/2">
+        <motion.div
+          className="md:w-1/2"
+          initial={{ opacity: 0, x: -100 }} // Start from the left
+          whileInView={{ opacity: 1, x: 0 }} // Move to the original position
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-3xl font-bold mb-4">
             About GreenBin Global Company
           </h1>
@@ -44,15 +54,23 @@ const AboutUs = () => {
               Read More
             </a>
           </div>
-        </div>
-        <div className="md:w-1/2 mt-5 md:mt-0">
+        </motion.div>
+
+        <motion.div
+          className="md:w-1/2 mt-5 md:mt-0"
+          initial={{ opacity: 0, x: 100 }} // Start from the right
+          whileInView={{ opacity: 1, x: 0 }} // Move to the original position
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <img
             src={about}
             alt="GreenBin Foundation"
             className="w-full h-80 rounded-2xl shadow-lg"
           />
-        </div>
+        </motion.div>
       </div>
+
       {/* Vision and Mission */}
       <div className="flex flex-col md:flex-row mt-5">
         <div className="md:w-1/2 mb-5 md:mb-0">
@@ -77,6 +95,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+
       {/* Core Values */}
       <div className="mt-10">
         <h2 className="text-2xl font-semibold text-center mb-5">
@@ -121,9 +140,13 @@ const AboutUs = () => {
               icon: circularEconomyImg,
             },
           ].map((value, index) => (
-            <div
+            <motion.div
               key={index}
               className="p-5 bg-white rounded-3xl shadow-sm text-center"
+              initial={{ opacity: 0, y: 30 }} // Start with fade-in from below
+              whileInView={{ opacity: 1, y: 0 }} // Fade-in to original position
+              transition={{ duration: 0.8, delay: index * 0.1 }} // Staggered delay
+              viewport={{ once: true }}
             >
               <img
                 src={value.icon}
@@ -134,12 +157,13 @@ const AboutUs = () => {
                 {index + 1}. {value.title}
               </h4>
               <p>{value.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };
 
 export default AboutUs;
+

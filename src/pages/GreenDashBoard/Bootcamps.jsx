@@ -17,7 +17,7 @@ const Bootcamps = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.h1
-          className="text-4xl font-bold text-green-700 mb-6 text-center"
+          className="text-4xl font-bold text-[#44b027] mb-6 text-center"
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
@@ -76,7 +76,7 @@ const Bootcamps = () => {
         </motion.div>
 
         <motion.h2
-          className="text-2xl font-semibold text-green-600 mb-4"
+          className="text-2xl font-semibold text-[#44b027] mb-4"
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
@@ -123,7 +123,7 @@ const Bootcamps = () => {
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <button className="bg-green-600 mt-5 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
+          <button className="bg-[#44b027] mt-5 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
             Sign Up for Upcoming Events
           </button>
         </motion.div>

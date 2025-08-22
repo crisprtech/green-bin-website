@@ -16,12 +16,12 @@ const ContactUs = () => {
       {/* Hero Section */}
       <div className=" pb-16 px-4 text-center">
         <motion.h1
-          className="text-4xl sm:text-5xl font-extrabold text-green-700"
+          className="text-4xl sm:text-5xl font-extrabold text-[#8bc34a]"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          Contact GreenBin Research
+          Contact GreenBin Company
         </motion.h1>
         <motion.p
           className="mt-4 max-w-2xl mx-auto text-gray-700 text-lg"
@@ -39,7 +39,7 @@ const ContactUs = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-10">
         {/* Contact Form */}
         <div className="bg-white shadow-lg border-green-700 rounded-3xl p-6 border">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">
+          <h2 className="text-2xl font-semibold text-[#8bc34a] mb-4">
             Send Us a Message
           </h2>
           <form className="space-y-4">
@@ -65,7 +65,7 @@ const ContactUs = () => {
             />
             <button
               type="submit"
-              className="w-full py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
+              className="w-full py-3 bg-[#8bc34a] text-white font-bold rounded-lg hover:bg-green-700 transition"
             >
               Send Message
             </button>
