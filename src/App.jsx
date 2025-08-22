@@ -25,6 +25,7 @@ import ContactUs from "./pages/ContactUs";
 import JoinOurTeam from "./pages/JoinTeam";
 import PageNotFound from "./pages/PageNotFound";
 import Bootcamps from './pages/GreenDashBoard/Bootcamps'; 
+import CarbonMarketExplorer from './pages/GreenCarbonPoints/ExploreMarkets'
 function App() {
   return (
     <Router>
@@ -40,6 +41,7 @@ function App() {
           path="/GreenCarbonPoints/OtherServices/DashBoard"
           element={<ServiceDashBoard />}
         />
+        <Route path='/GreenCarbonPoints/ExploreMarkets' element={<CarbonMarketExplorer />} /> 
         <Route
           path="/GreenCarbonPoints/GreenBinDAO"
           element={<GreenBinDAO />}

@@ -54,19 +54,13 @@ const Header = () => {
                 Circular Registry System{" "}
               </DropdownItem>{" "}
               <DropdownItem
-                to="/GreenCarbonPoints/OtherServices/DashBoard"
+                to="/GreenCarbonPoints/ExploreMarkets"
                 icon={Globe}
               >
                 Explore Carbon Markets
               </DropdownItem>
               <DropdownItem to="/GreenCarbonPoints/GreenBinDAO" icon={Globe}>
                 Participate in GreenBin DAO
-              </DropdownItem>
-              <DropdownItem
-                to="/GreenCarbonPoints/OtherServices/DashBoard"
-                icon={Globe}
-              >
-                Carbon Security Exchange
               </DropdownItem>
               <DropdownItem to="/GreenCarbonPoints/Leaderboard" icon={FileText}>
                 Get Access to GreenBin Assets and Bonds
