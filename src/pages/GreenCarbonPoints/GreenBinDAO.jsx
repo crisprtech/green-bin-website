@@ -8,7 +8,7 @@ const GreenBinDAO = () => {
   };
 
   return (
-    <div className="flex mt-10 flex-col items-center justify-center min-h-screen container mx-auto py-12 px-4">
+    <div className="flex  flex-col items-center justify-center  container mx-auto  px-4">
       <motion.div
         className=" bg-white shadow-lg rounded-lg p-8"
         initial="hidden"

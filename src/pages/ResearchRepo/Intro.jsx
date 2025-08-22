@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // Adding animations
 
 const HeroScreen = () => {
   return (
-    <div className="relative mt-20 container mx-auto justify-center text-center text-white pb-20 ">
+    <div className="relative  container mx-auto justify-center text-center text-white">
       <div className="relative z-10 p-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}

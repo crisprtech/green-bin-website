@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"; import { Link } from "react-router-dom";
 import {
   Leaf,
   Globe,
@@ -24,13 +23,13 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white z-[50] font-sans">
-      <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-10">
+    <nav className="flex flex:row items-center  justify-between ml-30  top-0 bg-white font-sans">
+      <div className="flex justify-between items-center py-3 px-4 md:px-10">
         {/* Logo and Brand */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className=" ">
           <img src={logo} alt="GreenBin Logo" className="w-18 h-18" />
         </Link>
-      <h1>GreenBin Research</h1>
+        <h1 className="font-extrabold font-sans">GreenBin Research</h1>
         {/* Mobile menu toggle */}
         <button
           className="md:hidden"
@@ -45,7 +44,7 @@ const Header = () => {
             isMobileMenuOpen ? "block" : "hidden"
           } absolute md:static top-20 left-0 w-full md:w-auto bg-white md:flex md:items-center shadow-xs md:shadow-none z-40`}
         >
-          <div className="flex flex-col md:flex-row md:items-center w-full md:space-x-4">
+          <div className="flex flex-col ml-60 md:flex-row md:items-center ">
             <Dropdown
               title="Circular Registry"
               isOpen={activeDropdown === "Carbon Registry"}
@@ -155,20 +154,13 @@ const Header = () => {
               </DropdownItem>
             </Dropdown>
 
-            <div className="md:hidden w-full px-4 py-2">
-              <Link to="/authentication/LoginPage">
-                <button className="w-full border-2 border-green-500 rounded-2xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-          </div>
+                      </div>
         </div>
 
         {/* Desktop Auth Button */}
-        <div className="hidden md:flex mr-60">
+        <div className="hidden md:flex ml-70 ">
           <Link to="/authentication/LoginPage">
-            <button className="border-2 border-green-500 rounded-2xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
+            <button className="border-2 border-green-500 rounded-xl text-green-600 font-semibold px-4 py-1.5 hover:bg-green-500 hover:text-white transition duration-300">
               Get Started
             </button>
           </Link>

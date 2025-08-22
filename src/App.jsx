@@ -50,8 +50,8 @@ function App() {
         />
 
         <Route
-          path="/GreenCarbonPoints/GreenBinDAO"
-          element={<GreenBinDAO />}
+          path="/GreenCarbonPoints/Leaderboard"
+          element={<LeaderBoard />}
         />
 
 

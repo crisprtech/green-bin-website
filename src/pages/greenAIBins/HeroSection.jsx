@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section text-center py-20 bg-white container mx-auto">
+    <div className="hero-section text-center  bg-white container mx-auto">
       <div className="flex flex-col md:flex-row items-center">
         {/* Left Side - Image */}
         <div className="md:w-1/2 mb-4 md:mb-0">

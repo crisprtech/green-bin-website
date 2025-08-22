@@ -47,7 +47,7 @@ const services = [
 
 const GCPServicesIntro = () => {
   return (
-    <div className="text-center container mx-auto mt-18 py-10 px-4">
+    <div className="text-center container mx-auto  px-4">
       <motion.h1
         className="mb-4 text-3xl font-bold text-green-600"
         initial={{ opacity: 0, y: -50 }}

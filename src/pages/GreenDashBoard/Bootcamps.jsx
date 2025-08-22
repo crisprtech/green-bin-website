@@ -8,7 +8,7 @@ const Bootcamps = () => {
   };
 
   return (
-    <div className="flex flex-col mt-12 items-center justify-center min-h-screen container mx-auto py-12 px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen container mx-auto  px-4">
       <motion.div
         className=" bg-white shadow-sm rounded-lg p-8"
         initial="hidden"

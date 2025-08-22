@@ -44,16 +44,16 @@ const paymentMethods = [
 
 const DonatePage = () => {
   return (
-    <div className="bg-white min-h-screen mt-10">
+    <div className="bg-white min-h-screen ">
       {/* Hero Section */}
-      <div className="relative  pt-24 pb-12 px-6 text-center">
+      <div className="relative  pt-4 pb-12 px-6 text-center">
         <motion.h1
           className="text-5xl font-extrabold text-green-700"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Support GreenBin’s Climate Mission
+          Support GreenBin’s clmate research and technology Mission
         </motion.h1>
         <motion.p
           className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg"

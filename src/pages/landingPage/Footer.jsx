@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <div
-      className="relative bg-[#1E293B]  overflow-hidden rounded-sm container mx-auto"
+      className="relative bg-[#1E293B]  overflow-hidden rounded-4xl container mx-auto"
       style={{ backgroundColor: "#1E293B" }}
     >
       {/* Footer Section */}
@@ -147,23 +147,6 @@ const Footer = () => {
               Get the latest news, articles, and resources.
             </p>
           </div>
-          <div className="flex items-center space-x-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-gray-100 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-            <motion.button
-              className="bg-[#AEF359] hover:bg-green-600 text-white px-4 py-2 rounded-md"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Subscribe
-            </motion.button>
-          </div>
-        </div>
-        {/* Social Links */}
-        {/* Social Links */}
         <div className="max-w-7xl mx-auto mt-8 flex justify-center space-x-4 footer-element">
           <a href="#" className="text-black hover:text-green-500">
             <img src={facebook} alt="Facebook" className="w-6 h-6" />
@@ -181,11 +164,21 @@ const Footer = () => {
             <img src={tiktok} alt="Tiktok" className="w-6 h-6" />
           </a>
         </div>{" "}
-        {/* Footer Bottom */}
-        <div className="max-w-7xl mx-auto mt-8 text-center footer-element">
-          <p className="text-gray-600">
-            &copy; {new Date().getFullYear()} GreenBin. All rights reserved.
-          </p>
+ 
+          <div className="flex items-center space-x-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="bg-gray-100 text-black px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <motion.button
+              className="bg-[#AEF359] hover:bg-green-600 text-white px-4 py-2 rounded-md"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Subscribe
+            </motion.button>
+          </div>
         </div>
       </footer>
     </div>

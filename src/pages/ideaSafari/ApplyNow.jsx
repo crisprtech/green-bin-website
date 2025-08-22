@@ -21,7 +21,7 @@ const ApplyNow = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
+    <div className="max-w-lg  mx-auto p-8 bg-white rounded-lg shadow-lg ">
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         Apply for Idea Safari
       </h2>

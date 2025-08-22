@@ -10,7 +10,7 @@ import {
 const AboutFellowship = () => {
   return (
     <motion.div
-      className="about-fellowship bg-white text-black min-h-screen p-12"
+      className="about-fellowship bg-white text-black  "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

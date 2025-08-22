@@ -20,10 +20,10 @@ const Introduction = () => {
 
   return (
     <div
-      className="relative overflow-hidden py-16 px-4 md:px-20 bg-cover  items-end bg-center"
+      className="relative overflow-hidden py-16 container mx-auto px-4 md:px-20 bg-cover  items-end bg-center"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
-      <div className="relative max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 z-10">
+      <div className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 z-10">
         {/* Left Main Section */}
         <div className="w-full md:w-2/3">
           <motion.h1

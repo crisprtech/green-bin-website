@@ -10,7 +10,7 @@ import {
 
 const LeaderBoard = () => {
   return (
-    <div className=" min-h-screen py-12 px-6 container mx-auto">
+    <div className=" min-h-screen pb-10  px-6 container mx-auto">
       {/* Hero Section */}
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">

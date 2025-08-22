@@ -13,8 +13,8 @@ const benefits = [
 
 export default function JoinOurTeam() {
   return (
-    <section className="bg-white text-white py-16 px-4 sm:px-8 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="bg-white text-white w-full py-16 px-4 sm:px-8 md:px-16">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* IMAGE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
