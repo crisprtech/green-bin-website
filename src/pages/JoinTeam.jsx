@@ -13,7 +13,7 @@ const benefits = [
 
 export default function JoinOurTeam() {
   return (
-    <section className="bg-white text-white w-full py-16 px-4 sm:px-8 md:px-16">
+    <section className="bg-white text-white py-16 px-4 sm:px-8 ">
       <div className="grid md:grid-cols-2 gap-10 items-center">
         {/* IMAGE */}
         <motion.div
@@ -49,7 +49,7 @@ export default function JoinOurTeam() {
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-start space-x-3">
                 <svg
-                  className="w-6 h-6 text-green-400 shrink-0"
+                  className="w-6 h-6 text-[#44b027] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -68,7 +68,7 @@ export default function JoinOurTeam() {
 
           <a
             href="#"
-            className="inline-block mt-8 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-md text-white font-medium"
+            className="inline-block mt-8 bg-[#44b027] hover:bg-green-600 transition px-6 py-3 rounded-md text-white font-medium"
           >
             See our job postings
           </a>

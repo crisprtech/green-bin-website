@@ -82,7 +82,7 @@ const OurServices = () => {
     <div className="min-h-screen max-w-7xl mx-auto  pb-12">
       {/* Hero Section */}
       <div className="text-center px-6 py-4">
-        <h1 className="text-5xl font-extrabold text-green-700">
+        <h1 className="text-5xl font-extrabold text-[#44b027]">
           Our Services at GreenBin
         </h1>
         <p className="mt-4 max-w-4xl mx-auto text-gray-700 text-lg">
@@ -97,14 +97,14 @@ const OurServices = () => {
         {services.map((service, idx) => (
           <motion.div
             key={idx}
-            className="bg-white shadow-md rounded-2xl p-6 border-l-4 border-green-600 hover:shadow-xl transition-all"
+            className="bg-white shadow-md rounded-2xl p-6 border-l-4 border-[#44b027] hover:shadow-xl transition-all"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1, duration: 0.6, ease: "easeOut" }}
           >
             <div className="flex items-center space-x-4 mb-4">
-              <service.icon className="text-green-600" size={32} />
+              <service.icon className="text-[#44b027]" size={32} />
               <h3 className="text-xl font-bold text-gray-800">
                 {service.title}
               </h3>
@@ -116,7 +116,7 @@ const OurServices = () => {
 
       {/* Call to Action */}
       <div className="text-center mt-20 px-4">
-        <h2 className="text-3xl font-bold text-green-700 mb-4">
+        <h2 className="text-3xl font-bold text-[#44b027] mb-4">
           Ready to Be Part of the GreenBin Ecosystem?
         </h2>
         <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
@@ -125,7 +125,7 @@ const OurServices = () => {
         </p>
         <a
           href="/authentication/LoginPage"
-          className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition"
+          className="inline-block bg-[#44b027] hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition"
         >
           Get Started Now
         </a>

@@ -48,7 +48,7 @@ const DonatePage = () => {
       {/* Hero Section */}
       <div className="relative  pt-4 pb-12 px-6 text-center">
         <motion.h1
-          className="text-5xl font-extrabold text-green-700"
+          className="text-5xl max-w-1/2 ml-100 items-center justify-center font-extrabold text-[#44b027]"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -71,7 +71,7 @@ const DonatePage = () => {
         {paymentMethods.map((method, index) => (
           <motion.div
             key={index}
-            className="bg-white border-l-4 border-green-600 shadow-md rounded-xl p-6"
+            className="bg-white border-l-4 border-[#44b027] shadow-md rounded-xl p-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -89,27 +89,19 @@ const DonatePage = () => {
       </div>
 
       {/* Impact Testimonial */}
-      <div className="max-w-4xl mx-auto mt-12 bg-green-100 px-6 py-10 rounded-xl shadow-inner">
-        <p className="text-xl italic text-green-900 text-center font-medium">
-          “Your support directly contributes to our carbon marketplace, DAO
-          onboarding, GreenBin scholarships, and technology transfer programs
-          like Idea Safari. Let’s innovate for a sustainable future.”
-        </p>
-      </div>
-
-      {/* Contact Info */}
+            {/* Contact Info */}
       <div className="mt-16 text-center px-6">
-        <h2 className="text-2xl font-bold text-green-700">Need Assistance?</h2>
+        <h2 className="text-2xl font-bold text-[#44b027]">Need Assistance?</h2>
         <p className="text-gray-700 mt-2">
           Reach out via{" "}
           <a
             href="mailto:support@greenbin.org"
-            className="text-green-600 underline"
+            className="text-[#44b027] underline"
           >
             support@greenbin.org
           </a>{" "}
           or join our{" "}
-          <a href="/contact" className="text-green-600 underline">
+          <a href="/contact" className="text-[#44b027] underline">
             community support
           </a>{" "}
           space.
@@ -120,11 +112,20 @@ const DonatePage = () => {
       <div className="text-center mt-16 pb-16">
         <a
           href="/"
-          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition"
+          className="bg-[#44b027] hover:bg-[#44b027] text-white font-semibold py-3 px-6 rounded-full transition"
         >
           Back to Home
         </a>
       </div>
+      <div className="container  mx-auto mt-12 bg-[#1E293B]  px-6 py-10 rounded-lg shadow-inner">
+        <p className="text-xl italic text-white text-center font-medium">
+          “Your support directly contributes to our carbon marketplace, DAO
+          onboarding, GreenBin scholarships, and technology transfer programs
+          like Idea Safari. Let’s innovate for a sustainable future.”
+        </p>
+      </div>
+
+
     </div>
   );
 };

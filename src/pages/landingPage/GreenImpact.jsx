@@ -44,7 +44,7 @@ const ImpactPerformance = () => {
 
   return (
     <div className="py-10 px-4 ">
-      <h2 className="text-center text-3xl font-bold mb-8 text-green-700">
+      <h2 className="text-center text-3xl font-bold mb-8 text-[#44b027]">
         GreenBin Impact Performance
       </h2>
       <div className="flex flex-wrap justify-center space-x-4 space-y-4">

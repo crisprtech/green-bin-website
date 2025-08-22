@@ -33,7 +33,7 @@ const Introduction = () => {
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
 >
-  Join <span className="text-[#44b027]">Green</span><span className="text-[#1e88e5]">Bin</span> Global Company
+  Join <span className="text-[#44b027]">Green</span><span className="text-orange-300">Bin</span> Global Company
 </motion.h1>
           <motion.p
             className="mb-6 text-lg md:text-xl text-gray-700"

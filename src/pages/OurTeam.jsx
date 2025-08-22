@@ -51,7 +51,7 @@ const OurTeam = () => {
 
   return (
     <div className="my-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-center text-[#8bc34a] mb-6">
+      <h2 className="text-3xl font-bold text-center text-[#44b027] mb-6">
         Meet Our Team
       </h2>
       <p className="text-lg text-gray-700 mb-10">
@@ -77,7 +77,7 @@ const OurTeam = () => {
                 className="w-full h-58 rounded-3xl object-cover"
               />
               <motion.button
-                className="absolute top-2 left-2 bg-[#8bc34a] text-white text-xs font-bold py-1 px-2 rounded"
+                className="absolute top-2 left-2 bg-[#44b027] text-white text-xs font-bold py-1 px-2 rounded"
                 animate={{ y: ["0%", "-10%", "0%"] }} // Bouncing effect
                 transition={{
                   duration: 0.5,
@@ -90,7 +90,7 @@ const OurTeam = () => {
               </motion.button>
             </div>
             <div className="p-6">
-              <h3 className="text-lg font-semibold text-[#8bc34a]">
+              <h3 className="text-lg font-semibold text-[#44b027]">
                 {member.name}
               </h3>
               <h4 className="text-sm text-gray-500 mb-2">{member.title}</h4>

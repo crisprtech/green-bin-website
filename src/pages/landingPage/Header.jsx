@@ -213,7 +213,6 @@ const DropdownItem = ({ to, children, icon: Icon }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05, y: -3 }} // Bounce effect on hover
-      transition={{ type: "spring", stiffness: 250, damping: 60 }} // Spring effect for bounce
       initial={{ opacity: 0, y: 10 }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -54,7 +54,7 @@ const LoginPage = () => {
       <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-lg rounded-3xl overflow-hidden">
         {/* Login Form Section */}
         <div className="p-8 w-full">
-          <h2 className="text-center text-2xl font-bold text-green-600 mb-6">
+          <h2 className="text-center text-2xl font-bold text-[#44b027] mb-6">
             Login
           </h2>
           <p className="text-gray-700 text-sm mb-4">
@@ -131,7 +131,7 @@ const LoginPage = () => {
 
             <button
               type="submit"
-              className={`w-full bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl py-2 shadow-md transition duration-200 ${
+              className={`w-full bg-[#44b027] hover:bg-green-700 text-white font-semibold rounded-xl py-2 shadow-md transition duration-200 ${
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={loading}
@@ -140,7 +140,7 @@ const LoginPage = () => {
             </button>
           </form>
           <div className="text-center mt-4">
-            <a href="/forgot-password" className="text-green-600 hover:underline">
+            <a href="/forgot-password" className="text-[#44b027] hover:underline">
               Forgot Password?
             </a>
           </div>

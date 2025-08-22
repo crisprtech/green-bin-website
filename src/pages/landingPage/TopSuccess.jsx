@@ -22,7 +22,7 @@ const HowWeMakeAnImpact = () => {
         </p>
 
         <div className="flex justify-center mb-8">
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-500 transition mr-3">
+          <button className="bg-orange-300 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-500 transition mr-3">
             Get Involved
           </button>
           <button className="border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white transition">
