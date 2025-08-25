@@ -1,100 +1,89 @@
 import React from "react";
-import {
-  FaRecycle,
-  FaLeaf,
-  FaLightbulb,
-  FaTree,
-  FaHandsHelping,
-} from "react-icons/fa"; // Importing updated icons
-import business from "../../assets/business.jpg";
-import { motion } from "framer-motion"; // Import framer-motion for animations
-
-const HowWeMakeAnImpact = () => {
+import { FaRecycle, FaLeaf, FaLightbulb, FaHandsHelping } from "react-icons/fa";
+import { motion } from "framer-motion";
+import business from "../../assets/green_field.jpeg";
+const HowWeMakeImpact = () => {
   return (
-    <div className="my-12 container mx-auto ">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        viewport={{ once: true }}
-        className="rounded-sm p-8 shadow-xs mb-8"
+    <div className="relative">
+      {/* Background Hero Section */}
+      <div
+        className="h-[70vh] bg-cover bg-center relative flex flex-col items-center"
+        style={{
+          backgroundImage: `url(${business})`,
+        }}
       >
-        <p className="text-center text-black text-lg mb-8">
-          Together, we can transform waste into opportunity. Through sustainable
-          waste management, eco-friendly commerce, and innovative recycling
-          initiatives, we empower communities to protect the environment while
-          creating economic value. Join us in making a lasting impact!
-        </p>
+        {/* Overlay gradient */}
 
-        <div className="flex justify-center mb-8">
-          <button className="bg-[#44b027] text-white py-2 px-4 rounded-lg shadow hover:bg-[#44b027] transition mr-3">
-            Get Involved
-          </button>
-          <button className="border border-[#1E293B] text-[#1E293B] py-2 px-4 rounded-lg hover:bg-[#1E293B] hover:text-white transition">
-            Learn More
-          </button>
+        {/* Black container overlapping the hero (half overlap) */}
+        <div className="relative z-10 w-full max-w-6xl -mt-24">
+          <div className="bg-gray-900 rounded-xl shadow-xl px-8 py-12">
+            {/* Section Title */}
+            <h2 className="text-2xl md:text-3xl text-white font-semibold mb-8 ">
+              Climate Research
+            </h2>
+
+            {/* Cards inside black background */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              {[
+                {
+                  icon: <FaRecycle className="text-blue-400 text-4xl mb-4" />,
+                  title: "Climate Research & Technology",
+                  description:
+                    "Transforming waste into valuable resources while fostering environmental stewardship and growth.",
+                },
+                {
+                  icon: <FaLeaf className="text-green-400 text-4xl mb-4" />,
+                  title: "Green Ecommerce",
+                  description:
+                    "Promoting sustainable products and encouraging responsible consumer habits.",
+                },
+                {
+                  icon: (
+                    <FaLightbulb className="text-yellow-400 text-4xl mb-4" />
+                  ),
+                  title: "Carbon Finance",
+                  description:
+                    "Empowering communities to develop creative solutions for sustainability.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                >
+                  {item.icon}
+                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Email subscribe input */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full md:w-1/2 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+                Subscribe
+              </button>
+            </div>
+          </div>
         </div>
-      </motion.div>
 
-      <div className="flex flex-col md:flex-row mb-8">
-        {/* Image on the top for smaller screens */}
-        <div className="w-full md:w-1/2 mb-4 md:mb-0 mr-10 flex justify-center">
-          <img
-            src={business}
-            alt="GreenBin Programs"
-            className="rounded-4xl shadow-xs"
-          />
-        </div>
-
-        {/* Programs Grid */}
-        <div className="grid grid-cols-1 gap-6 md:w-1/2">
-          {[
-            {
-              icon: <FaRecycle className="text-blue-600 text-4xl mb-2" />,
-              title: "Climate Research & Technology",
-              description:
-                "Our community-driven recycling initiatives transform waste into valuable resources, fostering environmental stewardship and economic growth.",
-            },
-            {
-              icon: <FaLeaf className="text-green-500 text-4xl mb-2" />,
-              title: "Green Ecommerce in GreenBin App",
-              description:
-                "We promote sustainable products, encouraging responsible consumer habits that significantly reduce environmental pollution.",
-            },
-            {
-              icon: <FaLightbulb className="text-yellow-500 text-4xl mb-2" />,
-              title: "Decentralised Carbon Finance ",
-              description:
-                "Our programs empower communities to develop creative solutions for environmental challenges, enhancing sustainability practices.",
-            },
-            {
-              icon: (
-                <FaHandsHelping className="text-orange-600 text-4xl mb-2" />
-              ),
-              title: "Community Sensitization Fellowship",
-              description:
-                "We implement effective strategies that foster community involvement in waste management and recycling efforts, promoting a cleaner environment.",
-            },
-          ].map((program, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-3xl p-6 flex"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: index * 0.1 }} // Delay for staggered effect
-            >
-              <div className="mr-4 self-start">{program.icon}</div>
-              <div className="flex flex-col">
-                <h5 className="text-md font-semibold mb-2">{program.title}</h5>
-                <p className="text-gray-600 text-xs">{program.description}</p>
-              </div>
-            </motion.div>
-          ))}
+        {/* Hero text BELOW the black container */}
+        <div className="relative z-10 mt-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Accelerating climate adaptation globally
+          </h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default HowWeMakeAnImpact;
+export default HowWeMakeImpact;
