@@ -84,7 +84,7 @@ const Header = () => {
               onToggle={() => handleDropdownToggle("Climate Intelligence")}
             >
               <DropdownItem to="/greenAIBins/wasteManagement" icon={Globe}>
-                Green Programs and Sustainable Projects
+                GreenBin Programs Calendar
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
                 Organization Departments Overview

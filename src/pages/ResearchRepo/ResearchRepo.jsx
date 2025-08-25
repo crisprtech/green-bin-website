@@ -2,7 +2,7 @@ import React from "react";
 import EducationalPlatform from "./Educational";
 import HeroScreen from "./Intro";
 import { motion } from "framer-motion";
-
+import Footer from "../landingPage/Footer";
 const ResearchRepository = () => {
   return (
     <motion.div
@@ -25,6 +25,7 @@ const ResearchRepository = () => {
       >
         <EducationalPlatform />
       </motion.div>
+      <Footer />
     </motion.div>
   );
 };

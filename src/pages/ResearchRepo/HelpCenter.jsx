@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import Footer from "../landingPage/Footer";
 // FAQ Data
 const faqCategories = [
   {
@@ -183,6 +183,7 @@ const HelpCenter = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 };

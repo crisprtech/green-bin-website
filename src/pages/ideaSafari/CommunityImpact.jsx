@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
+import Footer from '../landingPage/Footer'
 const LatestProjects = () => {
   const projects = [
     {
@@ -43,6 +43,7 @@ const LatestProjects = () => {
   ];
 
   return (
+    <div>
     <div className="p-10 container mx-auto">
       <h2 className="text-3xl font-bold text-center text-[#44b027] mb-6">
         Latest Projects
@@ -75,6 +76,8 @@ const LatestProjects = () => {
           </motion.div>
         ))}
       </div>
+    </div>
+      <Footer />
     </div>
   );
 };

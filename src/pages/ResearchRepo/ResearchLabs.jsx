@@ -4,7 +4,7 @@ import ResearchLabsAndTestimonials from "./Labs&Testimonials";
 
 const ResearchLabs = () => {
   return (
-    <div className="bg-white-500 max-w-7xl mx-auto">
+    <div className="bg-white-500  mx-auto">
       <ResearchLabsHero />
       <ResearchLabsAndTestimonials />
     </div>

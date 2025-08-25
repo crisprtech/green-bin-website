@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import Footer from "../landingPage/Footer";
 // Research Labs Data
 const researchLabs = [
   {
@@ -56,7 +56,7 @@ const Screen = ({ title, content }) => (
     transition={{ duration: 0.8 }}
   >
     <div className="py-10 bg-white">
-      <h2 className="text-center text-3xl font-bold text-green-600 mb-6">
+      <h2 className="text-center text-3xl font-bold text-[#44b027] mb-6">
         {title}
       </h2>
       <div className="p-10">{content}</div>
@@ -69,7 +69,7 @@ const ResearchLabsScreen = () => (
   <Screen
     title="Squad Research Labs Across the Country"
     content={
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 container mx-auto">
         {researchLabs.map((lab, index) => (
           <div
             key={index}
@@ -84,7 +84,7 @@ const ResearchLabsScreen = () => (
             </p>
             <a
               href="#"
-              className="mt-4 block w-full text-center bg-green-600 text-white font-semibold rounded-2xl x-4 py-2 hover:bg-green-700 transition duration-300"
+              className="mt-4 block w-full text-center border border-2 border-[#44b027] text-[#44b027] font-semibold rounded-md x-4 py-2 hover:bg-[#44b027] hover:text-white transition duration-300"
             >
               Visit Climate Lab
             </a>
@@ -123,10 +123,11 @@ const TestimonialsScreen = () => (
 
 // Main Component
 const ResearchLabsAndTestimonials = () => (
-  <>
+  <div>
     <ResearchLabsScreen />
     <TestimonialsScreen />
-  </>
+    <Footer />
+  </div>
 );
 
 export default ResearchLabsAndTestimonials;
