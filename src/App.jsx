@@ -19,13 +19,15 @@ import ServiceDashBoard from "./pages/GreenCarbonPoints/OtherServices/DashBoard"
 import AboutFellowship from "./pages/wasteFellowship/AboutFellowship";
 import HelpCenter from "./pages/ResearchRepo/HelpCenter";
 import OurTeam from "./pages/OurTeam";
+import HeroSection from "./pages/ideaSafari/CommunityFellowship";
 import OurServices from "./pages/Services";
+import LatestProjects from "./pages/ideaSafari/CommunityImpact";
 import DonatePage from "./pages/Donate";
 import ContactUs from "./pages/ContactUs";
 import JoinOurTeam from "./pages/JoinTeam";
 import PageNotFound from "./pages/PageNotFound";
-import Bootcamps from './pages/GreenDashBoard/Bootcamps'; 
-import CarbonMarketExplorer from './pages/GreenCarbonPoints/ExploreMarkets'
+import Bootcamps from "./pages/GreenDashBoard/Bootcamps";
+import CarbonMarketExplorer from "./pages/GreenCarbonPoints/ExploreMarkets";
 function App() {
   return (
     <Router>
@@ -41,21 +43,20 @@ function App() {
           path="/GreenCarbonPoints/OtherServices/DashBoard"
           element={<ServiceDashBoard />}
         />
-        <Route path='/GreenCarbonPoints/ExploreMarkets' element={<CarbonMarketExplorer />} /> 
+        <Route
+          path="/GreenCarbonPoints/ExploreMarkets"
+          element={<CarbonMarketExplorer />}
+        />
         <Route
           path="/GreenCarbonPoints/GreenBinDAO"
           element={<GreenBinDAO />}
         />
-        <Route
-          path="/GreenDashBoard/Bootcamps"
-          element={<Bootcamps />}
-        />
+        <Route path="/GreenDashBoard/Bootcamps" element={<Bootcamps />} />
 
         <Route
           path="/GreenCarbonPoints/Leaderboard"
           element={<LeaderBoard />}
         />
-
 
         <Route
           path="/GreenCarbonPoints/GreenCarbon"
@@ -83,6 +84,12 @@ function App() {
           path="/ResearchRepo/UploadResearch"
           element={<UploadResearch />}
         />
+        <Route
+          path="/ideaSafari/CommunityFellowship"
+          element={<HeroSection />}
+        />
+        <Route path="/ideaSafari/CommunityImpct" element={<LatestProjects />} />
+
         <Route path="/greenAIBins/wasteManagement" element={<SmartAIBins />} />
         <Route path="/ResearchRepo/HelpCenter" element={<HelpCenter />} />
         <Route path="/OurTeam" element={<OurTeam />} />

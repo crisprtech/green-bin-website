@@ -70,13 +70,10 @@ const Header = () => {
               isOpen={activeDropdown === "Idea Safari"}
               onToggle={() => handleDropdownToggle("Idea Safari")}
             >
-              <DropdownItem to="/ideaSafari/ApplyNow" icon={Lightbulb}>
-                Access Idea Safari Platform
-              </DropdownItem>
               <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
                 Principle of IdeaSafari
               </DropdownItem>
-              <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
+              <DropdownItem to="/ideaSafari/CommunityFellowship" icon={Users}>
                 Community Sensitization Fellowship
               </DropdownItem>
             </Dropdown>
