@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import facebook from "../../assets/facebook.png";
-import instagram from "../../assets/instagram.png";
-import tiktok from "../../assets/tik-tok.png";
-import twitter from "../../assets/twitter.png";
-import linkedin from "../../assets/linkedin.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaTiktok,
+} from "react-icons/fa";
+
 const Footer = () => {
   useEffect(() => {
     // Add fade-in-up animation to footer elements on load
@@ -15,12 +18,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <div
-      className="relative bg-[#1E293B]  overflow-hidden rounded-sm" 
-      style={{ backgroundColor: "#1E293B" }}
-    >
+    <div className="relative bg-[#1E293B] overflow-hidden">
       {/* Footer Section */}
-      <footer className="bg-[#1E293B]  text-white py-10">
+      <footer className="bg-[#1E293B] text-white py-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About GreenBin */}
           <div className="footer-element">
@@ -139,6 +139,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
         {/* Subscribe Section */}
         <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row items-center justify-between footer-element">
           <div className="mb-4 md:mb-0">
@@ -147,24 +148,40 @@ const Footer = () => {
               Get the latest news, articles, and resources.
             </p>
           </div>
-        <div className="max-w-7xl mx-auto mt-8 flex justify-center space-x-4 footer-element">
-          <a href="#" className="text-black hover:text-green-500">
-            <img src={facebook} alt="Facebook" className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-black hover:text-green-500">
-            <img src={twitter} alt="Twitter" className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-black hover:text-green-500">
-            <img src={instagram} alt="Instagram" className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-black hover:text-green-500">
-            <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-black hover:text-green-500">
-            <img src={tiktok} alt="Tiktok" className="w-6 h-6" />
-          </a>
-        </div>{" "}
- 
+
+          <div className="max-w-7xl mx-auto mt-8 flex justify-center space-x-4 footer-element">
+            <a
+              href="#"
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="#"
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="#"
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaTiktok />
+            </a>
+          </div>
+
           <div className="flex items-center space-x-4">
             <input
               type="email"

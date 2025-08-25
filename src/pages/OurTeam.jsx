@@ -3,6 +3,7 @@ import ceoLars from "../assets/peterson.jpeg"; // Replace with actual path
 import ceoSophia from "../assets/sophia.jpeg"; // Replace with actual path
 import ceoMohammed from "../assets/mohammed.jpeg"; // Replace with actual path
 import watson from "../assets/watson.jpeg"; // Replace with actual path
+import Footer from './landingPage/Footer'
 import { motion } from "framer-motion";
 import JoinOurTeam from "./JoinTeam";
 const OurTeam = () => {
@@ -50,6 +51,7 @@ const OurTeam = () => {
   ];
 
   return (
+    <div>
     <div className="my-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center text-[#44b027] mb-6">
         GreenBin Board of Directors
@@ -104,6 +106,8 @@ const OurTeam = () => {
       <div className="mt-10">
         <JoinOurTeam />
       </div>
+    </div>
+      <Footer />
     </div>
   );
 };
