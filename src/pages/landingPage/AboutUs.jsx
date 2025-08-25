@@ -79,8 +79,7 @@ const AboutUs = () => {
           </h2>
           <p className="text-gray-700">
             To be a global catalyst for sustainable innovation, empowering
-            communities to transform waste into wealth, drive eco-friendly
-            commerce, and create lasting environmental impact through technology
+            communities to transform and  create lasting environmental impact through technology
             and collaboration.
           </p>
         </div>

@@ -52,7 +52,7 @@ const OurTeam = () => {
   return (
     <div className="my-3 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center text-[#44b027] mb-6">
-        Meet Our Team
+        GreenBin Board of Directors
       </h2>
       <p className="text-lg text-gray-700 mb-10">
         At GreenBin Research, our team is dedicated to creating sustainable

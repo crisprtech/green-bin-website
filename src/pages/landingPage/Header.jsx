@@ -1,4 +1,5 @@
-import React, { useState } from "react"; import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Leaf,
   Globe,
@@ -32,7 +33,7 @@ const Header = () => {
         <h1 className="font-extrabold font-sans">GreenBin Research</h1>
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden"
+          className="sm:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <Menu className="w-9 h-9 text-gray-800 " />
@@ -53,10 +54,7 @@ const Header = () => {
               <DropdownItem to="/GreenCarbonPoints/GreenCarbon" icon={FileText}>
                 Circular Registry System{" "}
               </DropdownItem>{" "}
-              <DropdownItem
-                to="/GreenCarbonPoints/ExploreMarkets"
-                icon={Globe}
-              >
+              <DropdownItem to="/GreenCarbonPoints/ExploreMarkets" icon={Globe}>
                 Explore Carbon Markets
               </DropdownItem>
               <DropdownItem to="/GreenCarbonPoints/GreenBinDAO" icon={Globe}>
@@ -76,10 +74,10 @@ const Header = () => {
                 Access Idea Safari Platform
               </DropdownItem>
               <DropdownItem to="/ideaSafari/IdeaSafari" icon={BookOpen}>
-                Community Sensitization Fellowship
+                Principle of IdeaSafari
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
-                Idea Safari Partnerships
+                Community Sensitization Fellowship
               </DropdownItem>
             </Dropdown>
 
@@ -101,7 +99,7 @@ const Header = () => {
                 Workshops and Climate Bootcamps
               </DropdownItem>
               <DropdownItem to="/wasteFellowship/AboutFellowship" icon={Users}>
-                GreenBin Research Academy
+                Waste Management Clinics
               </DropdownItem>
             </Dropdown>
 
@@ -121,7 +119,7 @@ const Header = () => {
               </DropdownItem>
 
               <DropdownItem to="/ResearchRepo/ResearchLabs" icon={Leaf}>
-                GreenBin jobs 
+                GreenBin jobs
               </DropdownItem>
             </Dropdown>
 
@@ -147,14 +145,13 @@ const Header = () => {
                 Donate
               </DropdownItem>
             </Dropdown>
-
-                      </div>
+          </div>
         </div>
 
         {/* Desktop Auth Button */}
         <div className="hidden md:flex ml-70 ">
           <Link to="/authentication/LoginPage">
-            <button className="border-2 border-[#44b027] rounded-xl text-[#44b027] font-semibold px-4 py-1.5 hover:bg-[#44b027] hover:text-white transition duration-300">
+            <button className="border-2 border-[#1E293B] bg-[#1E293B] rounded-xl text-white font-semibold px-4 py-1.5 hover:bg-[#1E293B] hover:text-white transition duration-300">
               Get Started
             </button>
           </Link>

@@ -74,20 +74,20 @@ const ContactUs = () => {
 
         {/* Contact Info & Map */}
         <div className="space-y-6">
-          <div className="bg-green-100 rounded-lg p-6 shadow">
-            <h3 className="text-xl font-semibold text-green-800 mb-2">
+          <div className="bg-[#1E293B] rounded-lg p-6 shadow">
+            <h3 className="text-xl font-semibold text-white mb-2">
               Our Contact Details
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 text-white">
                 <Phone size={20} className="text-green-600" />
                 +254 712 345 678
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 text-white">
                 <Mail size={20} className="text-green-600" />
                 support@greenbin.org
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3 text-white">
                 <MapPin size={20} className="text-green-600" />
                 GreenBin Headquarters, Nairobi, Kenya
               </li>

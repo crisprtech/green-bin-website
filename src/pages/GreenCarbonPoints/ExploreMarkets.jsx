@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const CarbonMarketExplorer = () => {
   return (
-    <div className="bg-gray-900 container mx-auto text-white mb-20 border rounded-xl">
+    <div className="bg-[#1E293B] container mx-auto text-white mb-20 border rounded-xl">
       {/* Hero Section */}
       <div className="relative h-[500px] overflow-hidden bg-white">
         <div className="absolute inset-0 opacity-80"></div>
@@ -26,7 +26,7 @@ const CarbonMarketExplorer = () => {
             change.
           </motion.p>
           <motion.button
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md text-lg font-bold"
+            className="bg-[#44b027] hover:bg-green-600 text-white px-6 py-3 rounded-md text-lg font-bold"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -52,7 +52,7 @@ const CarbonMarketExplorer = () => {
             interactive tools will help you visualize your carbon footprint and
             identify opportunities to make a difference.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+          <button className="bg-[#44b027] hover:bg-green-600 text-white px-4 py-2 rounded-md">
             Analyze Your Footprint
           </button>
         </motion.div>
@@ -91,7 +91,7 @@ const CarbonMarketExplorer = () => {
             impact. From tree planting to renewable energy projects, find the
             right fit for your goals and budget.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+          <button className="bg-[#44b027] hover:bg-green-600 text-white px-4 py-2 rounded-md">
             Learn More
           </button>
         </motion.div>
@@ -128,7 +128,7 @@ const CarbonMarketExplorer = () => {
             trading mechanisms, and the different types of carbon credits
             available to individuals and businesses.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+          <button className="bg-[#44b027] hover:bg-green-600 text-white px-4 py-2 rounded-md">
             Explore the Market
           </button>
         </motion.div>
@@ -165,7 +165,7 @@ const CarbonMarketExplorer = () => {
             Empower yourself to make informed decisions and contribute to a
             greener future.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">
+          <button className="bg-[#44b027] hover:bg-green-600 text-white px-4 py-2 rounded-md">
             Start Learning
           </button>
         </motion.div>

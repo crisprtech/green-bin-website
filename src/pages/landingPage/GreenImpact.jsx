@@ -1,16 +1,14 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaProjectDiagram, FaUsers, FaHandshake, FaCheckCircle, FaLightbulb, FaUserFriends, FaFlask } from "react-icons/fa";
+import { FaProjectDiagram, FaUsers, FaHandshake,  FaLightbulb,  FaFlask } from "react-icons/fa";
 
 const metrics = [
   { id: 1, label: "Projects Onboarded", value: 150, icon: <FaProjectDiagram className="text-green-600 text-4xl mb-2" /> },
-  { id: 2, label: "Users in the App", value: 5000, icon: <FaUsers className="text-blue-600 text-4xl mb-2" /> },
-  { id: 3, label: "Startups and Partnerships Onboarded", value: 50, icon: <FaHandshake className="text-purple-600 text-4xl mb-2" /> },
-  { id: 4, label: "Projects Verified", value: 120, icon: <FaCheckCircle className="text-yellow-600 text-4xl mb-2" /> },
-  { id: 5, label: "Idea Safari Impacted Startups/Squads", value: 30, icon: <FaLightbulb className="text-orange-600 text-4xl mb-2" /> },
-  { id: 6, label: "Users Impacted", value: 10000, icon: <FaUserFriends className="text-red-600 text-4xl mb-2" /> },
-  { id: 7, label: "Research Labs Onboarded in Counties", value: 10, icon: <FaFlask className="text-teal-600 text-4xl mb-2" /> },
+  { id: 2, label: "Startups and Partnerships Onboarded", value: 50, icon: <FaHandshake className="text-purple-600 text-4xl mb-2" /> },
+  { id: 3, label: "Idea Safari Impacted Startups/Squads", value: 30, icon: <FaLightbulb className="text-orange-600 text-4xl mb-2" /> },
+  { id: 4, label: "Users Impacted", value: 10000, icon: <FaUsers className="text-red-600 text-4xl mb-2" /> },
+  { id: 5, label: "Research Labs Onboarded in Counties", value: 10, icon: <FaFlask className="text-teal-600 text-4xl mb-2" /> },
 ];
 
 const ImpactPerformance = () => {

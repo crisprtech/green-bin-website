@@ -1,6 +1,11 @@
-
 import React from "react";
-import { FaRecycle, FaLeaf, FaLightbulb, FaTree, FaHandsHelping } from "react-icons/fa"; // Importing updated icons
+import {
+  FaRecycle,
+  FaLeaf,
+  FaLightbulb,
+  FaTree,
+  FaHandsHelping,
+} from "react-icons/fa"; // Importing updated icons
 import business from "../../assets/business.jpg";
 import { motion } from "framer-motion"; // Import framer-motion for animations
 
@@ -22,10 +27,10 @@ const HowWeMakeAnImpact = () => {
         </p>
 
         <div className="flex justify-center mb-8">
-          <button className="bg-orange-300 text-white py-2 px-4 rounded-lg shadow hover:bg-blue-500 transition mr-3">
+          <button className="bg-[#44b027] text-white py-2 px-4 rounded-lg shadow hover:bg-[#44b027] transition mr-3">
             Get Involved
           </button>
-          <button className="border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white transition">
+          <button className="border border-[#1E293B] text-[#1E293B] py-2 px-4 rounded-lg hover:bg-[#1E293B] hover:text-white transition">
             Learn More
           </button>
         </div>
@@ -63,7 +68,9 @@ const HowWeMakeAnImpact = () => {
                 "Our programs empower communities to develop creative solutions for environmental challenges, enhancing sustainability practices.",
             },
             {
-              icon: <FaHandsHelping className="text-orange-600 text-4xl mb-2" />,
+              icon: (
+                <FaHandsHelping className="text-orange-600 text-4xl mb-2" />
+              ),
               title: "Community Sensitization Fellowship",
               description:
                 "We implement effective strategies that foster community involvement in waste management and recycling efforts, promoting a cleaner environment.",
@@ -77,10 +84,7 @@ const HowWeMakeAnImpact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: index * 0.1 }} // Delay for staggered effect
             >
-
-              <div className="mr-4 self-start">
-                {program.icon}
-              </div>
+              <div className="mr-4 self-start">{program.icon}</div>
               <div className="flex flex-col">
                 <h5 className="text-md font-semibold mb-2">{program.title}</h5>
                 <p className="text-gray-600 text-xs">{program.description}</p>
@@ -94,4 +98,3 @@ const HowWeMakeAnImpact = () => {
 };
 
 export default HowWeMakeAnImpact;
-

@@ -26,7 +26,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-400 text-white text-sm font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
@@ -65,7 +65,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-400 text-white text-sm  font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
@@ -79,7 +79,7 @@ const DifferentDestinations = () => {
             500 Joined
           </motion.button>
           <div className="p-6">
-            <h5 className="text-lg font-semibold mb-2">Eco Entrepreneurs</h5>
+            <h5 className="text-lg font-semibold mb-2">Startups & Companies</h5>
             <p className="text-gray-600 mb-4 text-sm">
               Supporting green startups with insights, funding opportunities,
               and networking.
@@ -104,7 +104,7 @@ const DifferentDestinations = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }} // Ease in and out
         >
           <motion.button
-            className="absolute top-5 left-5 bg-orange-300 text-white text-xs font-bold py-1 px-2 rounded"
+            className="absolute top-5 left-5 bg-orange-400 text-white text-sm font-bold py-1 px-2 rounded"
             animate={{
               y: [0, -10, 0], // Bouncing effect
             }}
